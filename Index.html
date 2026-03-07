@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastián Franco - Unity Developer</title>
+    <!-- Fuentes modernas de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos (como los checkmarks de Hugo) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #0a0c0f; /* Fondo oscuro muy profundo */
+            color: #e0e0e0; /* Texto principal claro */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #22262b;
+            background-color: #0f1217; /* Un poco más claro que el fondo */
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .btn-cv {
+            background-color: #2d9cdb; /* Azul vibrante, como un acento */
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .btn-cv:hover {
+            background-color: #2483c0;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 100px 0 80px;
+            background: linear-gradient(180deg, #0f1217 0%, #0a0c0f 100%);
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1 1 500px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .hero-text h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #2d9cdb;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-links a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .hero-links a:hover {
+            color: #2d9cdb;
+        }
+
+        .hero-links .btn-primary {
+            background-color: #2d9cdb;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .hero-links .btn-primary:hover {
+            background-color: #2483c0;
+        }
+
+        /* TAGS (como en jayvanhutten) */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .tag {
+            background-color: #1e2329;
+            color: #b0b0b0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #2a2f36;
+        }
+
+        .tag-proyecto {
+            background-color: #1e3a4a;
+            color: #8ad0ff;
+            border-color: #2d9cdb;
+        }
+
+        /* ABOUT ME */
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid #1e2329;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #b0b0b0;
+        }
+
+        .skills-box {
+            flex: 1;
+            background-color: #0f1217;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #22262b;
+        }
+
+        .skills-box h3 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .skill-item {
+            background-color: #1a1e24;
+            color: #d0d0d0;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border-left: 3px solid #2d9cdb;
+        }
+
+        /* PROYECTOS */
+        .proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        /* --- ESTE ES EL CAMBIO PRINCIPAL --- */
+        .proyecto-card-link {
+            text-decoration: none;  /* Quita el subrayado del link */
+            color: inherit;         /* Hereda el color del texto, no el azul de link */
+            display: block;         /* Para que ocupe todo el espacio de la tarjeta */
+            transition: transform 0.3s, border-color 0.3s; /* La transición se aplica aquí */
+        }
+
+        .proyecto-card {
+            background-color: #0f1217;
+            border: 1px solid #22262b;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;           /* Para que ocupe todo el alto del link */
+        }
+
+        .proyecto-card-link:hover {
+            transform: translateY(-5px); /* El efecto hover ahora está en el link */
+        }
+
+        .proyecto-card-link:hover .proyecto-card {
+            border-color: #2d9cdb;  /* El borde cambia cuando el link está en hover */
+        }
+        /* --------------------------------- */
+
+        .proyecto-media {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #1a1e24;
+            /* Asegúrate de poner tus archivos GIF aquí */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Asigna las imágenes de fondo a cada proyecto (CAMBIA LOS NOMBRES) */
+        .proyecto-1 {
+            background-image: url('soplos-demo.gif'); /* <--- CAMBIA ESTO */
+        }
+        .proyecto-2 {
+            background-image: url('a-toda-mecha-demo.gif'); /* <--- CAMBIA ESTO */
+        }
+
+        .proyecto-content {
+            padding: 25px;
+        }
+
+        .proyecto-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .proyecto-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .proyecto-rol {
+            background-color: #1e3a4a;
+            color: #8ad0ff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .proyecto-desc {
+            color: #b0b0b0;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .contribuciones {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .contribuciones li {
+            list-style: none;
+            margin-bottom: 8px;
+            color: #cccccc;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .contribuciones i {
+            color: #2d9cdb;
+            font-size: 1rem;
+            margin-top: 4px;
+        }
+
+        /* EDUCACIÓN */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            border-bottom: 1px solid #1e2329;
+        }
+
+        .edu-item:last-child {
+            border-bottom: none;
+        }
+
+        .edu-left h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .edu-left p {
+            color: #b0b0b0;
+        }
+
+        .edu-right {
+            color: #8a8f99;
+            font-size: 0.9rem;
+            background-color: #1a1e24;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        /* CONTACTO */
+        .contacto-info {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contacto-info p {
+            margin-bottom: 30px;
+            color: #b0b0b0;
+        }
+
+        .contacto-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contacto-links a {
+            color: #ffffff;
+            background-color: #1e2329;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .contacto-links a:hover {
+            background-color: #2d9cdb;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+            border-top: 1px solid #1e2329;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="#">S. Franco</a>
+            </div>
+            <nav class="nav-links">
+                <a href="#about">Sobre Mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#skills">Skills</a>
+                <a href="#contacto">Contacto</a>
+                <a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank">📄 CV</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Sebastián Franco</h1>
+                    <h2>Unity Developer</h2>
+                    <p>Construyendo experiencias interactivas optimizadas con C# y Unity. Enfoque en gameplay, sistemas 3D/2D y código limpio.</p>
+                    <div class="hero-links">
+                        <a href="https://www.linkedin.com/in/sebastian-franco-2007---/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/sebas-50" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#contacto" class="btn-primary">Contactar</a>
+                    </div>
+                    <!-- Tags de habilidades -->
+                    <div class="skill-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Input System</span>
+                        <span class="tag">Cinemachine</span>
+                        <span class="tag">Físicas 3D</span>
+                        <span class="tag">Debugging</span>
+                    </div>
+                </div>
+                <!-- Podrías poner una ilustración o avatar aquí si quieres -->
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Sobre mí</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Soy Desarrollador en Unity. Tengo conocimientos en implementación de mecánicas de gameplay con C# en Unity: sistemas de movimiento, físicas 3D, detección de colisiones e integración del Input System. Mi formación como Técnico en Sistemas me brinda una base sólida en resolución de problemas, lo que me permite crear experiencias interactivas funcionales y optimizadas.</p>
+                        <p>Me interesa desarrollar juegos con jugabilidad fluida y aportar creatividad y compromiso a proyectos innovadores.</p>
+                        <p><i class="fas fa-quote-left" style="color: #2d9cdb;"></i> Ever since I was a child, I have been highly curious... games combined so many of my interests into an experience in which I was free to explore and uncover secrets. <i class="fas fa-quote-right" style="color: #2d9cdb;"></i></p>
+                    </div>
+                    <div class="skills-box" id="skills">
+                        <h3>Habilidades Técnicas</h3>
+                        <div class="skills-grid">
+                            <span class="skill-item">Unity</span>
+                            <span class="skill-item">C#</span>
+                            <span class="skill-item">Git/GitHub</span>
+                            <span class="skill-item">Input System</span>
+                            <span class="skill-item">Cinemachine</span>
+                            <span class="skill-item">Físicas 3D</span>
+                            <span class="skill-item">Colisiones</span>
+                            <span class="skill-item">Debugging</span>
+                            <span class="skill-item">Construct 3</span>
+                        </div>
+                        <h3 style="margin-top: 30px;">Idiomas</h3>
+                        <div class="skills-grid">
+                            <span class="skill-item">Español (Nativo)</span>
+                            <span class="skill-item">Inglés (A2)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS SECTION -->
+        <section id="proyectos" class="section">
+            <div class="container">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <div class="proyectos-grid">
+                    <!-- Proyecto 1: Soplos de Vida -->
+                    <!-- 👇 EL LINK AHORA ENVUELVE TODA LA TARJETA (CAMBIAR URL) -->
+                    <a href="https://tusitio.com/soplos-de-vida" target="_blank" class="proyecto-card-link">
+                        <div class="proyecto-card">
+                            <div class="proyecto-media proyecto-1"></div>
+                            <div class="proyecto-content">
+                                <div class="proyecto-header">
+                                    <h3>Soplos de Vida</h3>
+                                    <span class="proyecto-rol">Programador</span>
+                                </div>
+                                <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
+                                    <span class="tag tag-proyecto">Construct 3</span>
+                                </div>
+                                <p class="proyecto-desc">Videojuego 2D. Implementación de mecánicas principales y corrección de bugs críticos de IA.</p>
+                                <ul class="contribuciones">
+                                    <li><i class="fas fa-check-circle"></i> Implementé movimiento de personaje y sistema de persecución visual en enemigos, cubriendo el 60% de las mecánicas.</li>
+                                    <li><i class="fas fa-check-circle"></i> Corregí bug crítico donde los enemigos compartían IA, logrando comportamientos independientes.</li>
+                                    <li><i class="fas fa-check-circle"></i> Realicé pruebas, debugging y configuración de colisiones para asegurar la estabilidad.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Proyecto 2: A toda mecha -->
+                    <!-- 👇 EL LINK AHORA ENVUELVE TODA LA TARJETA (CAMBIAR URL) -->
+                    <a href="https://sebastian-franco.itch.io/a-toda-mecha" target="_blank" class="proyecto-card-link">
+                        <div class="proyecto-card">
+                            <div class="proyecto-media proyecto-2"></div>
+                            <div class="proyecto-content">
+                                <div class="proyecto-header">
+                                    <h3>A toda mecha</h3>
+                                    <span class="proyecto-rol">Programador Unity</span>
+                                </div>
+                                <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
+                                    <span class="tag tag-proyecto">Unity</span>
+                                    <span class="tag tag-proyecto">C#</span>
+                                    <span class="tag tag-proyecto">Git</span>
+                                </div>
+                                <p class="proyecto-desc">Proyecto en equipo. Desarrollo de mecánicas de movimiento y enemigos con Unity.</p>
+                                <ul class="contribuciones">
+                                    <li><i class="fas fa-check-circle"></i> Implementé sistema de movimiento y salto en Unity con C# y el nuevo Input System.</li>
+                                    <li><i class="fas fa-check-circle"></i> Configuré detección de colisiones y cámara con Cinemachine.</li>
+                                    <li><i class="fas fa-check-circle"></i> Programé comportamientos de enemigos con rutas y detección de proximidad.</li>
+                                    <li><i class="fas fa-check-circle"></i> Trabajo colaborativo con Git y enfoque en portafolio.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Nota sobre la Game Jam -->
+                <p style="text-align: center; color: #8a8f99; margin-top: 40px; font-style: italic;">
+                    🚀 Actualmente participando en una Game Jam con Generation. ¡Pronto más proyectos!
+                </p>
+            </div>
+        </section>
+
+        <!-- EDUCACIÓN -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Formación</h2>
+                <div class="edu-item">
+                    <div class="edu-left">
+                        <h4>Desarrollador de Unity</h4>
+                        <p>Generation, Virtual, Colombia</p>
+                    </div>
+                    <div class="edu-right">Ene 2026 - En curso</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-left">
+                        <h4>Tecnólogo en Análisis y Desarrollo de Software</h4>
+                        <p>SENA, Virtual, Colombia</p>
+                    </div>
+                    <div class="edu-right">Abr 2025 - En curso</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-left">
+                        <h4>Técnico en Sistemas</h4>
+                        <p>SENA, Soacha, Colombia</p>
+                    </div>
+                    <div class="edu-right">May 2023 - Dic 2024</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="section">
+            <div class="container contacto-info">
+                <h2 class="section-title">Contacto</h2>
+                <p>¿Tienes un proyecto en mente o quieres conversar sobre oportunidades? ¡Escríbeme!</p>
+                <div class="contacto-links">
+                    <a href="mailto:sfrancohappy@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/sebastian-franco-2007---/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/sebas-50" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Sebastián Franco Gomez</p>
+        </div>
+    </footer>
+
+    <!-- Pequeño script para navegación suave (opcional) -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
