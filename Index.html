@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <!-- Font Awesome para iconos (como los checkmarks de Hugo) -->
+    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -19,8 +19,8 @@
 
         body {
             font-family: "Inter", sans-serif;
-            background-color: #0a0c0f; /* Fondo oscuro muy profundo */
-            color: #e0e0e0; /* Texto principal claro */
+            background-color: #0a0c0f;
+            color: #e0e0e0;
             line-height: 1.6;
         }
 
@@ -34,7 +34,7 @@
         header {
             padding: 20px 0;
             border-bottom: 1px solid #22262b;
-            background-color: #0f1217; /* Un poco más claro que el fondo */
+            background-color: #0f1217;
         }
 
         .header-content {
@@ -71,7 +71,7 @@
         }
 
         .btn-cv {
-            background-color: #2d9cdb; /* Azul vibrante, como un acento */
+            background-color: #2d9cdb;
             color: white !important;
             padding: 8px 16px;
             border-radius: 6px;
@@ -152,7 +152,7 @@
             background-color: #2483c0;
         }
 
-        /* TAGS (como en jayvanhutten) */
+        /* TAGS */
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
@@ -242,12 +242,11 @@
             gap: 40px;
         }
 
-        /* --- ESTE ES EL CAMBIO PRINCIPAL --- */
         .proyecto-card-link {
-            text-decoration: none;  /* Quita el subrayado del link */
-            color: inherit;         /* Hereda el color del texto, no el azul de link */
-            display: block;         /* Para que ocupe todo el espacio de la tarjeta */
-            transition: transform 0.3s, border-color 0.3s; /* La transición se aplica aquí */
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.3s, border-color 0.3s;
         }
 
         .proyecto-card {
@@ -255,33 +254,31 @@
             border: 1px solid #22262b;
             border-radius: 12px;
             overflow: hidden;
-            height: 100%;           /* Para que ocupe todo el alto del link */
+            height: 100%;
         }
 
         .proyecto-card-link:hover {
-            transform: translateY(-5px); /* El efecto hover ahora está en el link */
+            transform: translateY(-5px);
         }
 
         .proyecto-card-link:hover .proyecto-card {
-            border-color: #2d9cdb;  /* El borde cambia cuando el link está en hover */
+            border-color: #2d9cdb;
         }
-        /* --------------------------------- */
 
         .proyecto-media {
             width: 100%;
             aspect-ratio: 16 / 9;
             background-color: #1a1e24;
-            /* Asegúrate de poner tus archivos GIF aquí */
             background-size: cover;
             background-position: center;
         }
 
-        /* Asigna las imágenes de fondo a cada proyecto (CAMBIA LOS NOMBRES) */
+        /* ✅ GIFS - Usando los archivos locales que ya tienes en GitHub */
         .proyecto-1 {
-            background-image: url('soplos-demo.gif'); /* <--- CAMBIA ESTO */
+            background-image: url('soplos-demo.gif');
         }
         .proyecto-2 {
-            background-image: url('a-toda-mecha-demo.gif'); /* <--- CAMBIA ESTO */
+            background-image: url('a-toda-mecha-demo.gif');
         }
 
         .proyecto-content {
@@ -474,7 +471,6 @@
                         <span class="tag">Debugging</span>
                     </div>
                 </div>
-                <!-- Podrías poner una ilustración o avatar aquí si quieres -->
             </div>
         </section>
 
@@ -517,8 +513,7 @@
                 <h2 class="section-title">Proyectos Destacados</h2>
                 <div class="proyectos-grid">
                     <!-- Proyecto 1: Soplos de Vida -->
-                    <!-- 👇 EL LINK AHORA ENVUELVE TODA LA TARJETA (CAMBIAR URL) -->
-                    <a href="https://tusitio.com/soplos-de-vida" target="_blank" class="proyecto-card-link">
+                    <a href="https://jonathan-franco-santana.itch.io/soplo-de-vida" target="_blank" class="proyecto-card-link">
                         <div class="proyecto-card">
                             <div class="proyecto-media proyecto-1"></div>
                             <div class="proyecto-content">
@@ -540,7 +535,6 @@
                     </a>
 
                     <!-- Proyecto 2: A toda mecha -->
-                    <!-- 👇 EL LINK AHORA ENVUELVE TODA LA TARJETA (CAMBIAR URL) -->
                     <a href="https://sebastian-franco.itch.io/a-toda-mecha" target="_blank" class="proyecto-card-link">
                         <div class="proyecto-card">
                             <div class="proyecto-media proyecto-2"></div>
@@ -620,7 +614,7 @@
         </div>
     </footer>
 
-    <!-- Pequeño script para navegación suave (opcional) -->
+    <!-- Script para navegación suave -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
