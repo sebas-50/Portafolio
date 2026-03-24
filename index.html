@@ -240,6 +240,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
+            margin-top: 40px;
         }
 
         .proyecto-card-link {
@@ -273,7 +274,19 @@
             background-position: center;
         }
 
-        /* ✅ GIFS - Usando los archivos locales que ya tienes en GitHub */
+        /* Video embed */
+        .proyecto-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+        
+        .proyecto-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* GIFs - proyectos existentes */
         .proyecto-1 {
             background-image: url('soplos-demo.gif');
         }
@@ -290,6 +303,8 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .proyecto-header h3 {
@@ -332,6 +347,23 @@
             color: #2d9cdb;
             font-size: 1rem;
             margin-top: 4px;
+        }
+
+        .btn-demo {
+            display: inline-block;
+            background-color: #2d9cdb;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-demo:hover {
+            background-color: #2483c0;
         }
 
         /* EDUCACIÓN */
@@ -460,7 +492,6 @@
                         <a href="https://github.com/sebas-50" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="#contacto" class="btn-primary">Contactar</a>
                     </div>
-                    <!-- Tags de habilidades -->
                     <div class="skill-tags">
                         <span class="tag">C#</span>
                         <span class="tag">Unity</span>
@@ -482,7 +513,6 @@
                     <div class="about-text">
                         <p>Soy Desarrollador en Unity. Tengo conocimientos en implementación de mecánicas de gameplay con C# en Unity: sistemas de movimiento, físicas 3D, detección de colisiones e integración del Input System. Mi formación como Técnico en Sistemas me brinda una base sólida en resolución de problemas, lo que me permite crear experiencias interactivas funcionales y optimizadas.</p>
                         <p>Me interesa desarrollar juegos con jugabilidad fluida y aportar creatividad y compromiso a proyectos innovadores.</p>
-                        <p><i class="fas fa-quote-left" style="color: #2d9cdb;"></i> Ever since I was a child, I have been highly curious... games combined so many of my interests into an experience in which I was free to explore and uncover secrets. <i class="fas fa-quote-right" style="color: #2d9cdb;"></i></p>
                     </div>
                     <div class="skills-box" id="skills">
                         <h3>Habilidades Técnicas</h3>
@@ -511,6 +541,41 @@
         <section id="proyectos" class="section">
             <div class="container">
                 <h2 class="section-title">Proyectos Destacados</h2>
+                
+                <!-- PROYECTO PRINCIPAL: NIGHTLIGHT -->
+                <div style="margin-bottom: 60px;">
+                    <a href="https://sebastian-franco-gomez.itch.io/nightlight" target="_blank" class="proyecto-card-link">
+                        <div class="proyecto-card">
+                            <div class="proyecto-video">
+                                <iframe src="https://www.youtube.com/watch?v=yHXRtA7lOzw&t" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="proyecto-content">
+                                <div class="proyecto-header">
+                                    <h3>Nightlight</h3>
+                                    <span class="proyecto-rol">Programador Principal</span>
+                                </div>
+                                <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
+                                    <span class="tag tag-proyecto">Unity</span>
+                                    <span class="tag tag-proyecto">C#</span>
+                                    <span class="tag tag-proyecto">Input System</span>
+                                    <span class="tag tag-proyecto">Stealth Gameplay</span>
+                                </div>
+                                <p class="proyecto-desc">Juego de terror y sigilo en primera persona. Despiertas en medio de la noche, la casa está a oscuras y un acecha en los pasillos. Encuentra la llave para escapar antes de que te atrape.</p>
+                                <ul class="contribuciones">
+                                    <li><i class="fas fa-check-circle"></i> Implementación completa de IA del enemigo: sistema de patrullaje, detección visual y audio, estados de búsqueda y caza.</li>
+                                    <li><i class="fas fa-check-circle"></i> Sistema de linterna con batería limitada: consumo progresivo, recarga y efectos visuales.</li>
+                                    <li><i class="fas fa-check-circle"></i> Sistema de inventario simple: objetos coleccionables, interacción con puertas y llaves.</li>
+                                    <li><i class="fas fa-check-circle"></i> Lógica de peso: algunos items afectan la velocidad del jugador.</li>
+                                    <li><i class="fas fa-check-circle"></i> Menús funcionales (pausa, game over, victoria) con integración completa.</li>
+                                </ul>
+                                <a href="https://sebastian-franco-gomez.itch.io/nightlight" target="_blank" class="btn-demo">🎮 Descargar en Itch.io</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- OTROS PROYECTOS (los dos anteriores) -->
+                <h3 style="color: #ffffff; margin-bottom: 30px; font-weight: 500;">Otros proyectos</h3>
                 <div class="proyectos-grid">
                     <!-- Proyecto 1: Soplos de Vida -->
                     <a href="https://jonathan-franco-santana.itch.io/soplo-de-vida" target="_blank" class="proyecto-card-link">
@@ -559,10 +624,6 @@
                         </div>
                     </a>
                 </div>
-                <!-- Nota sobre la Game Jam -->
-                <p style="text-align: center; color: #8a8f99; margin-top: 40px; font-style: italic;">
-                    🚀 Actualmente participando en una Game Jam con Generation. ¡Pronto más proyectos!
-                </p>
             </div>
         </section>
 
@@ -614,7 +675,6 @@
         </div>
     </footer>
 
-    <!-- Script para navegación suave -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
