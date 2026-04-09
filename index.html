@@ -4,483 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebastián Franco - Unity Developer</title>
-    <!-- Fuentes modernas de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            background-color: #0a0c0f;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* HEADER */
-        header {
-            padding: 20px 0;
-            border-bottom: 1px solid #22262b;
-            background-color: #0f1217;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo a {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #b0b0b0;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ffffff;
-        }
-
-        .btn-cv {
-            background-color: #2d9cdb;
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-weight: 600;
-        }
-
-        .btn-cv:hover {
-            background-color: #2483c0;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            padding: 100px 0 80px;
-            background: linear-gradient(180deg, #0f1217 0%, #0a0c0f 100%);
-        }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .hero-text {
-            flex: 1 1 500px;
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-
-        .hero-text h2 {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #2d9cdb;
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            font-size: 1.1rem;
-            color: #b0b0b0;
-            margin-bottom: 30px;
-            max-width: 600px;
-        }
-
-        .hero-links {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .hero-links a {
-            color: #ffffff;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .hero-links a:hover {
-            color: #2d9cdb;
-        }
-
-        .hero-links .btn-primary {
-            background-color: #2d9cdb;
-            padding: 12px 30px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .hero-links .btn-primary:hover {
-            background-color: #2483c0;
-        }
-
-        /* TAGS */
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 30px;
-        }
-
-        .tag {
-            background-color: #1e2329;
-            color: #b0b0b0;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid #2a2f36;
-        }
-
-        .tag-proyecto {
-            background-color: #1e3a4a;
-            color: #8ad0ff;
-            border-color: #2d9cdb;
-        }
-
-        /* ABOUT ME */
-        .section {
-            padding: 80px 0;
-            border-bottom: 1px solid #1e2329;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 40px;
-            color: #ffffff;
-        }
-
-        .about-content {
-            display: flex;
-            gap: 50px;
-            align-items: flex-start;
-            flex-wrap: wrap;
-        }
-
-        .about-text {
-            flex: 2;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            color: #b0b0b0;
-        }
-
-        .skills-box {
-            flex: 1;
-            background-color: #0f1217;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #22262b;
-        }
-
-        .skills-box h3 {
-            color: #ffffff;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-
-        .skill-item {
-            background-color: #1a1e24;
-            color: #d0d0d0;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            border-left: 3px solid #2d9cdb;
-        }
-
-        /* PROYECTOS */
-        .proyectos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .proyecto-card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .proyecto-card {
-            background-color: #0f1217;
-            border: 1px solid #22262b;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 100%;
-        }
-
-        .proyecto-card-link:hover {
-            transform: translateY(-5px);
-        }
-
-        .proyecto-card-link:hover .proyecto-card {
-            border-color: #2d9cdb;
-        }
-
-        .proyecto-media {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background-color: #1a1e24;
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Video embed */
-        .proyecto-video {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-        }
-        
-        .proyecto-video iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* GIFs - proyectos existentes */
-        .proyecto-1 {
-            background-image: url('soplos-demo.gif');
-        }
-        .proyecto-2 {
-            background-image: url('a-toda-mecha-demo.gif');
-        }
-
-        .proyecto-content {
-            padding: 25px;
-        }
-
-        .proyecto-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .proyecto-header h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        .proyecto-rol {
-            background-color: #1e3a4a;
-            color: #8ad0ff;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .proyecto-desc {
-            color: #b0b0b0;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-
-        .contribuciones {
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-
-        .contribuciones li {
-            list-style: none;
-            margin-bottom: 8px;
-            color: #cccccc;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .contribuciones i {
-            color: #2d9cdb;
-            font-size: 1rem;
-            margin-top: 4px;
-        }
-
-        .btn-demo {
-            display: inline-block;
-            background-color: #2d9cdb;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-
-        .btn-demo:hover {
-            background-color: #2483c0;
-        }
-
-        /* EDUCACIÓN */
-        .edu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 20px 0;
-            border-bottom: 1px solid #1e2329;
-        }
-
-        .edu-item:last-child {
-            border-bottom: none;
-        }
-
-        .edu-left h4 {
-            color: #ffffff;
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .edu-left p {
-            color: #b0b0b0;
-        }
-
-        .edu-right {
-            color: #8a8f99;
-            font-size: 0.9rem;
-            background-color: #1a1e24;
-            padding: 5px 12px;
-            border-radius: 20px;
-        }
-
-        /* CONTACTO */
-        .contacto-info {
-            text-align: center;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .contacto-info p {
-            margin-bottom: 30px;
-            color: #b0b0b0;
-        }
-
-        .contacto-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .contacto-links a {
-            color: #ffffff;
-            background-color: #1e2329;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            transition: background-color 0.3s;
-            text-decoration: none;
-        }
-
-        .contacto-links a:hover {
-            background-color: #2d9cdb;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #6b7280;
-            font-size: 0.9rem;
-            border-top: 1px solid #1e2329;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .about-content {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
-                <a href="#">S. Franco</a>
+                <a href="index.html">S. Franco</a>
             </div>
             <nav class="nav-links">
                 <a href="#about">Sobre Mí</a>
                 <a href="#proyectos">Proyectos</a>
                 <a href="#skills">Skills</a>
                 <a href="#contacto">Contacto</a>
-                <a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank">📄 CV</a>
+                <a href="https://docs.google.com/document/d/1ZCxHGOK-E3wCAAMovwbhQ3uwSNEnI1HQ/edit?usp=sharing&ouid=102209303394914323646&rtpof=true&sd=true" class="btn-cv" target="_blank">📄 CV</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
         <section class="hero">
             <div class="container hero-content">
                 <div class="hero-text">
@@ -505,14 +51,14 @@
             </div>
         </section>
 
-        <!-- ABOUT SECTION -->
         <section id="about" class="section">
             <div class="container">
                 <h2 class="section-title">Sobre mí</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Soy Desarrollador en Unity. Tengo conocimientos en implementación de mecánicas de gameplay con C# en Unity: sistemas de movimiento, físicas 3D, detección de colisiones e integración del Input System. Mi formación como Técnico en Sistemas me brinda una base sólida en resolución de problemas, lo que me permite crear experiencias interactivas funcionales y optimizadas.</p>
-                        <p>Me interesa desarrollar juegos con jugabilidad fluida y aportar creatividad y compromiso a proyectos innovadores.</p>
+                        <p>Soy Desarrollador Unity con experiencia en mecánicas de gameplay usando C#: movimiento, físicas 3D, colisiones y el nuevo Input System. Mi formación como Técnico en Sistemas me da una base sólida en resolución de problemas y lógica estructurada.</p>
+                        <p>Me especializo en <strong>IA y comportamiento de NPCs</strong> —enemigos con patrullaje, persecución, detección visual/auditiva y reacciones únicas. He participado en game jams de 36 y 72 horas, y mis proyectos están publicados en itch.io.</p>
+                        <p>Actualmente manejo Git, trabajo en equipo multidisciplinario y sigo formándome en optimización y persistencia de datos.</p>
                     </div>
                     <div class="skills-box" id="skills">
                         <h3>Habilidades Técnicas</h3>
@@ -527,60 +73,83 @@
                             <span class="skill-item">Debugging</span>
                             <span class="skill-item">Construct 3</span>
                         </div>
-                        <h3 style="margin-top: 30px;">Idiomas</h3>
+                        <h3 style="margin-top: 30px;">Habilidades Blandas</h3>
                         <div class="skills-grid">
-                            <span class="skill-item">Español (Nativo)</span>
-                            <span class="skill-item">Inglés (A2)</span>
+                            <span class="skill-item">Adaptación</span>
+                            <span class="skill-item">Flexibilidad</span>
+                            <span class="skill-item">Trabajo en equipo</span>
+                            <span class="skill-item">Creatividad</span>
+                            <span class="skill-item">Gestión del tiempo</span>
+                            <span class="skill-item">Pensamiento crítico</span>
+                            <span class="skill-item">Proactividad</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROYECTOS SECTION -->
+                <!-- PROYECTOS SECTION -->
         <section id="proyectos" class="section">
             <div class="container">
                 <h2 class="section-title">Proyectos Destacados</h2>
                 
-                <!-- PROYECTO PRINCIPAL: NIGHTLIGHT -->
-                <div style="margin-bottom: 60px;">
-                    <a href="https://sebastian-franco-gomez.itch.io/nightlight" target="_blank" class="proyecto-card-link">
+                <div class="proyectos-grid">
+                    <!-- Nightlight -->
+                    <a href="proyecto-nightlight.html" class="proyecto-card-link">
                         <div class="proyecto-card">
-                            <div class="proyecto-video">
-    <div class="proyecto-video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/yHXRtA7lOzw?si=bNfNEMg9ZpCvb7Fl&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-</div>
-<div class="proyecto-content">
-    <div class="proyecto-header">
-        <h3>Nightlight</h3>
-        <span class="proyecto-rol">Programador Principal</span>
-    </div>
-    <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
-        <span class="tag tag-proyecto">Unity</span>
-        <span class="tag tag-proyecto">C#</span>
-        <span class="tag tag-proyecto">2D Top-Down</span>
-        <span class="tag tag-proyecto">Stealth</span>
-    </div>
-    <p class="proyecto-desc">Juego de sigilo en 2D con vista cenital. Despiertas en medio de la noche, la casa está a oscuras y una criatura acecha. Encuentra la llave para escapar antes de que te atrape.</p>
-    <ul class="contribuciones">
-        <li><i class="fas fa-check-circle"></i> IA del enemigo: patrullaje, detección visual y auditiva, estados de búsqueda y caza.</li>
-        <li><i class="fas fa-check-circle"></i> Sistema de linterna con batería limitada y recarga.</li>
-        <li><i class="fas fa-check-circle"></i> Inventario simple: objetos coleccionables, interacción con puertas y llaves.</li>
-        <li><i class="fas fa-check-circle"></i> Lógica de peso: objetos afectan la velocidad del jugador.</li>
-        <li><i class="fas fa-check-circle"></i> Menús funcionales (pausa, game over, victoria).</li>
-    </ul>
-    <a href="https://sebastian-franco-gomez.itch.io/nightlight" target="_blank" class="btn-demo">🎮 Descargar en Itch.io</a>
-</div>
+                            <div class="proyecto-media">
+                                <img src="nightlight-demo.gif" alt="Nightlight gameplay" style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div class="proyecto-content">
+                                <div class="proyecto-header">
+                                    <h3>Nightlight</h3>
+                                    <span class="proyecto-rol">Programador Principal</span>
+                                </div>
+                                <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
+                                    <span class="tag tag-proyecto">Unity</span>
+                                    <span class="tag tag-proyecto">C#</span>
+                                    <span class="tag tag-proyecto">2D Top-Down</span>
+                                    <span class="tag tag-proyecto">Stealth</span>
+                                </div>
+                                <p class="proyecto-desc">Juego de sigilo en 2D. Despiertas en la noche, una criatura acecha. Encuentra la llave y escapa.</p>
+                                <ul class="contribuciones">
+                                    <li><i class="fas fa-check-circle"></i> IA del enemigo: patrullaje, detección visual/auditiva, búsqueda y caza.</li>
+                                    <li><i class="fas fa-check-circle"></i> Sistema de linterna con batería limitada y recarga.</li>
+                                    <li><i class="fas fa-check-circle"></i> Inventario simple y lógica de peso.</li>
+                                </ul>
+                            </div>
                         </div>
                     </a>
-                </div>
 
-                <!-- OTROS PROYECTOS (los dos anteriores) -->
-                <h3 style="color: #ffffff; margin-bottom: 30px; font-weight: 500;">Otros proyectos</h3>
-                <div class="proyectos-grid">
-                    <!-- Proyecto 1: Soplos de Vida -->
-                    <a href="https://jonathan-franco-santana.itch.io/soplo-de-vida" target="_blank" class="proyecto-card-link">
+                    <!-- I have no enemies -->
+                    <a href="proyecto-ienemies.html" class="proyecto-card-link">
+                        <div class="proyecto-card">
+                            <div class="proyecto-media">
+                                <img src="ienemies-demo.gif" alt="I have no enemies gameplay" style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div class="proyecto-content">
+                                <div class="proyecto-header">
+                                    <h3>I have no enemies</h3>
+                                    <span class="proyecto-rol">Programador de IA</span>
+                                </div>
+                                <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
+                                    <span class="tag tag-proyecto">Unity</span>
+                                    <span class="tag tag-proyecto">C#</span>
+                                    <span class="tag tag-proyecto">2D Top-Down</span>
+                                    <span class="tag tag-proyecto">Máquinas de estado</span>
+                                </div>
+                                <p class="proyecto-desc">Game jam 36h. Enemigo con 3 estados: patrullaje, huida y "tranqui". Sistema de luces dinámicas.</p>
+                                <ul class="contribuciones">
+                                    <li><i class="fas fa-check-circle"></i> Máquina de estados: patrullar, huir (raycast al jugador) y tranqui.</li>
+                                    <li><i class="fas fa-check-circle"></i> Sistema de luces que se encienden/apagan con sombras en tiempo real.</li>
+                                    <li><i class="fas fa-check-circle"></i> Enemigo agarra un objeto (gato) y huye al detectar al jugador.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Soplos de Vida -->
+                    <a href="proyecto-soplos.html" class="proyecto-card-link">
                         <div class="proyecto-card">
                             <div class="proyecto-media proyecto-1"></div>
                             <div class="proyecto-content">
@@ -593,34 +162,9 @@
                                 </div>
                                 <p class="proyecto-desc">Videojuego 2D. Implementación de mecánicas principales y corrección de bugs críticos de IA.</p>
                                 <ul class="contribuciones">
-                                    <li><i class="fas fa-check-circle"></i> Implementé movimiento de personaje y sistema de persecución visual en enemigos, cubriendo el 60% de las mecánicas.</li>
-                                    <li><i class="fas fa-check-circle"></i> Corregí bug crítico donde los enemigos compartían IA, logrando comportamientos independientes.</li>
-                                    <li><i class="fas fa-check-circle"></i> Realicé pruebas, debugging y configuración de colisiones para asegurar la estabilidad.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Proyecto 2: A toda mecha -->
-                    <a href="https://sebastian-franco.itch.io/a-toda-mecha" target="_blank" class="proyecto-card-link">
-                        <div class="proyecto-card">
-                            <div class="proyecto-media proyecto-2"></div>
-                            <div class="proyecto-content">
-                                <div class="proyecto-header">
-                                    <h3>A toda mecha</h3>
-                                    <span class="proyecto-rol">Programador Unity</span>
-                                </div>
-                                <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
-                                    <span class="tag tag-proyecto">Unity</span>
-                                    <span class="tag tag-proyecto">C#</span>
-                                    <span class="tag tag-proyecto">Git</span>
-                                </div>
-                                <p class="proyecto-desc">Proyecto en equipo. Desarrollo de mecánicas de movimiento y enemigos con Unity.</p>
-                                <ul class="contribuciones">
-                                    <li><i class="fas fa-check-circle"></i> Implementé sistema de movimiento y salto en Unity con C# y el nuevo Input System.</li>
-                                    <li><i class="fas fa-check-circle"></i> Configuré detección de colisiones y cámara con Cinemachine.</li>
-                                    <li><i class="fas fa-check-circle"></i> Programé comportamientos de enemigos con rutas y detección de proximidad.</li>
-                                    <li><i class="fas fa-check-circle"></i> Trabajo colaborativo con Git y enfoque en portafolio.</li>
+                                    <li><i class="fas fa-check-circle"></i> Movimiento de personaje y persecución visual.</li>
+                                    <li><i class="fas fa-check-circle"></i> Corrección de IA compartida.</li>
+                                    <li><i class="fas fa-check-circle"></i> Pruebas, debugging y colisiones.</li>
                                 </ul>
                             </div>
                         </div>
@@ -629,7 +173,6 @@
             </div>
         </section>
 
-        <!-- EDUCACIÓN -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Formación</h2>
@@ -657,7 +200,6 @@
             </div>
         </section>
 
-        <!-- CONTACTO -->
         <section id="contacto" class="section">
             <div class="container contacto-info">
                 <h2 class="section-title">Contacto</h2>

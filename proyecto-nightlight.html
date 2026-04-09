@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightlight - Sebastián Franco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .proyecto-detalle {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .proyecto-detalle h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .proyecto-detalle .media {
+            margin: 30px 0;
+        }
+        .proyecto-detalle img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #2d9cdb;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .proyecto-detalle h2 {
+            color: #2d9cdb;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">S. Franco</a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html#about">Sobre Mí</a>
+                <a href="index.html#proyectos">Proyectos</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#contacto">Contacto</a>
+                <a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank">📄 CV</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="proyecto-detalle">
+            <a href="index.html" class="back-link">← Volver al portafolio</a>
+            <h1>Nightlight</h1>
+            <p><strong>Rol:</strong> Programador Principal</p>
+            <p><strong>Tecnologías:</strong> Unity, C#, Input System</p>
+            
+            <div class="media">
+                <img src="nightlight-demo.gif" alt="Gameplay Nightlight">
+            </div>
+            
+            <h2>📖 ¿Cómo fue?</h2>
+            <p>Nightlight nació en una game jam de 72 horas. Fue un proyecto grupal donde asumí el rol de programador principal, encargándome de aproximadamente el 65% de las mecánicas totales del juego. El mayor reto fue coordinar la integración de la UI con los sistemas internos, ya que el equipo artístico nos proporcionaba los assets sobre la marcha.</p>
+            
+            <h2>💡 ¿Cómo me sentí?</h2>
+            <p>Muy satisfecho. Ver cómo la IA del enemigo reaccionaba al jugador, cómo el sistema de peso afectaba la velocidad y cómo todo fluía junto me dio mucha confianza. Aprendí a trabajar bajo presión de tiempo real y a priorizar funcionalidades clave para entregar un juego jugable al final de la jam.</p>
+            
+            <h2>🔧 Detalles técnicos</h2>
+            <ul>
+                <li><strong>IA del enemigo:</strong> Máquina de estados con patrullaje, detección visual/auditiva, búsqueda y caza.</li>
+                <li><strong>Inventario:</strong> Sistema limitado a un solo objeto, con lógica de recogida y uso.</li>
+                <li><strong>Sistema de peso:</strong> Cada objeto tiene un valor que afecta la velocidad de movimiento del jugador.</li>
+                <li><strong>Puzzle de peso:</strong> Una puerta solo se abre si el jugador alcanza cierto umbral de peso.</li>
+                <li><strong>Menús funcionales:</strong> Pausa, game over y victoria, integrados con las mecánicas principales.</li>
+            </ul>
+            
+            <a href="https://sebastian-franco-gomez.itch.io/nightlight" target="_blank" class="btn-demo">Itch.io</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Sebastián Franco Gomez</p>
+        </div>
+    </footer>
+</body>
+</html>

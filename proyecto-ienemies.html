@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I have no enemies - Sebastián Franco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .proyecto-detalle {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .proyecto-detalle h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .proyecto-detalle .media {
+            margin: 30px 0;
+        }
+        .proyecto-detalle img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #2d9cdb;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .proyecto-detalle h2 {
+            color: #2d9cdb;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .tech-list li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+        }
+        .tech-list li::before {
+            content: "▹";
+            color: #2d9cdb;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">S. Franco</a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html#about">Sobre Mí</a>
+                <a href="index.html#proyectos">Proyectos</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#contacto">Contacto</a>
+                <a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank">📄 CV</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="proyecto-detalle">
+            <a href="index.html" class="back-link">← Volver al portafolio</a>
+            <h1>I have no enemies</h1>
+            <p><strong>Rol:</strong> Programador de IA y sistemas</p>
+            <p><strong>Tecnologías:</strong> Unity, C#, Máquinas de estado, Raycast</p>
+            <p><strong>Duración:</strong> Game Jam de 36 horas</p>
+            
+            <div class="media">
+                <img src="ienemies-demo.gif" alt="Gameplay I have no enemies">
+            </div>
+            
+            <h2>📖 ¿Cómo fue?</h2>
+            <p>Este proyecto nació en una game jam de 36 horas, donde asumí el rol principal en la programación de la IA y los sistemas de interacción. Fue un reto muy interesante porque el enemigo no seguía el patrón típico de "perseguir al jugador", sino que tenía comportamientos únicos: huir con un objeto clave y quedarse quieto en ciertas condiciones.</p>
+            <p>El equipo era pequeño pero enfocado, lo que permitió iterar rápido. Aprendí mucho sobre máquinas de estado y detección por raycast en 2D.</p>
+            
+            <h2>💡 ¿Cómo me sentí?</h2>
+            <p>Muy orgulloso de haber logrado que el enemigo tuviera comportamientos diferenciados y coherentes en tan poco tiempo. El momento más satisfactorio fue ver cómo el enemigo detectaba al jugador, agarraba el gato y huía de manera creíble. También disfruté mucho implementando el sistema de luces dinámicas, que le dio un ambiente más inmersivo al juego.</p>
+            
+            <h2>🔧 Detalles técnicos</h2>
+            <ul class="tech-list">
+                <li><strong>Máquina de estados:</strong> 3 modos de comportamiento: <em>Patrullar</em> (movimiento base), <em>Huir</em> (al detectar al jugador con raycast, agarra un objeto y se aleja) y <em>Tranqui</em> (se desactiva la IA por acción del jugador).</li>
+                <li><strong>Detección visual con Raycast:</strong> El enemigo usa raycasts en 2D para detectar al jugador. Si lo ve, cambia al estado de huida.</li>
+                <li><strong>Sistema de luces dinámicas:</strong> Luces que se encienden cuando el jugador pasa cerca y se apagan después, con sombras en tiempo real.</li>
+                <li><strong>Objeto clave (gato):</strong> El enemigo puede agarrar un objeto y llevárselo como parte de su mecánica de huida.</li>
+            </ul>
+            
+            <h2>📊 Mi contribución</h2>
+            <p>Implementé aproximadamente el <strong>70% de la IA y sistemas de interacción</strong> del juego, incluyendo la máquina de estados completa, el sistema de detección por raycast, y las luces dinámicas.</p>
+            
+            <a href="https://sebastian-franco-gomez.itch.io/i-have-no-enemis" class="btn-demo" target="_blank">Itch.io</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Sebastián Franco Gomez</p>
+        </div>
+    </footer>
+</body>
+</html>
