@@ -1,96 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soplos de Vida - Sebastián Franco</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .proyecto-detalle {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        .proyecto-detalle h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-        .proyecto-detalle .media {
-            margin: 30px 0;
-        }
-        .proyecto-detalle img {
-            width: 100%;
-            border-radius: 12px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 40px;
-            color: #2d9cdb;
-            text-decoration: none;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        .proyecto-detalle h2 {
-            color: #2d9cdb;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soplos de Vida — Sebastián Franco</title>
+<meta name="description" content="Mi primera game jam en Construct 3. Corrección de IA compartida, debugging y colisiones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/proyecto-detalle.css">
 </head>
-<body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <a href="index.html">S. Franco</a>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html#about">Sobre Mí</a>
-                <a href="index.html#proyectos">Proyectos</a>
-                <a href="index.html#skills">Skills</a>
-                <a href="index.html#contacto">Contacto</a>
-                <a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank">📄 CV</a>
-            </nav>
-        </div>
-    </header>
+<body class="proyecto-page">
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<header>
+<div class="container header-content">
+<div class="logo">
+<a href="index.html">S<span class="logo-dot">.</span>Franco</a>
+<div class="header-fly-title" aria-hidden="true">Soplos de Vida</div>
+</div>
+<nav class="nav-links" id="navMenu">
+<button class="menu-close-btn" id="menuCloseBtn" data-i18n-aria="aria_close_menu" aria-label="Cerrar menú">&times;</button>
+<a href="index.html#proyectos" data-i18n="btn_back">← Volver</a>
+<a href="index.html#about" data-i18n="nav_about">Sobre mí</a>
+<a href="index.html#contacto" data-i18n="nav_contact">Contacto</a>
+<a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> CV</a>
+</nav>
+<div class="header-actions">
+<button class="lang-toggle" id="langToggle" data-i18n-aria="aria_switch_en" aria-label="Cambiar idioma">
+<span class="lang-flag">🇺🇸</span> <span class="lang-label">EN</span>
+</button>
+<button class="menu-toggle" id="menuToggle" data-i18n-aria="aria_open_menu" aria-label="Abrir menú">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
 
-    <main>
-        <div class="proyecto-detalle">
-            <a href="index.html" class="back-link">← Volver al portafolio</a>
-            <h1>Soplos de Vida</h1>
-            <p><strong>Rol:</strong> Programador</p>
-            <p><strong>Tecnologías:</strong> Construct 3</p>
-            
-            <div class="media">
-                <img src="soplos-demo.gif" alt="Gameplay Soplos de Vida">
-            </div>
-            
-            <h2>📖 ¿Cómo fue?</h2>
-            <p>Fue mi primera game jam y mi primer acercamiento real al desarrollo de videojuegos. Aunque usamos Construct 3 (sin código), aprendí muchísimo sobre lógica de eventos, debugging y trabajo en equipo.</p>
-            
-            <h2>💡 ¿Cómo me sentí?</h2>
-            <p>El momento más satisfactorio fue cuando corregí el bug de la "mente colmena" (todos los enemigos pensaban igual). Lograr que cada enemigo actuara de forma independiente me enseñó la importancia de la arquitectura limpia.</p>
-            
-            <h2>🔧 Detalles técnicos</h2>
-            <ul>
-                <li><strong>Movimiento y persecución:</strong> Sistema de detección visual y persecución del jugador.</li>
-                <li><strong>Corrección crítica:</strong> Los enemigos compartían inteligencia; los independicé.</li>
-                <li><strong>Pruebas y debugging:</strong> Aseguré la estabilidad del juego antes de la entrega.</li>
-            </ul>
-            
-            <a href="https://jonathan-franco-santana.itch.io/soplo-de-vida" target="_blank" class="btn-demo">Itch.io</a>
-        </div>
-    </main>
+<main>
+<article class="proyecto-detalle">
+<a href="index.html#proyectos" class="back-link" data-i18n="back_portfolio"><i class="fas fa-arrow-left"></i> Volver al portafolio</a>
+<header class="detalle-hero">
+<h1 data-i18n="soplos_title">Soplos de Vida</h1>
+<div class="detalle-meta"><span class="detalle-rol" data-i18n="rol_programmer">Programador</span></div>
+<div class="detalle-tags">
+<span class="tag tag-proyecto">Construct 3</span>
+<span class="tag tag-proyecto">2D</span>
+<span class="tag tag-proyecto">Debugging</span>
+</div>
+</header>
+<div class="detalle-media"><img src="soplos-demo.gif" alt="Gameplay de Soplos de Vida"></div>
+<div class="detalle-grid">
+<div class="detalle-main">
+<section class="detalle-block"><h2><i class="fas fa-book-open"></i> <span data-i18n="section_about_project">Sobre el proyecto</span></h2><p data-i18n="soplos_about"><strong>Soplos de Vida</strong> fue mi primera game jam y mi primer acercamiento real al desarrollo. Usamos Construct 3 (motor sin código, basado en hojas de eventos). Fue una experiencia formativa clave.</p></section>
+<section class="detalle-block"><h2><i class="fas fa-heart"></i> <span data-i18n="section_how_i_felt">Cómo me sentí</span></h2><p data-i18n="soplos_felt">Intenso y revelador. El momento más satisfactorio fue corregir el bug de la "mente colmena" donde todos los enemigos compartían IA. Independizarlos me enseñó la importancia de la arquitectura limpia.</p></section>
+<section class="detalle-block"><h2><i class="fas fa-cogs"></i> <span data-i18n="section_tech_details">Detalles técnicos</span></h2><ul class="tech-list"><li data-i18n="soplos_tech_1"><strong>Movimiento y persecución:</strong> Sistema de detección visual con hoja de eventos de Construct 3.</li><li data-i18n="soplos_tech_2"><strong>Corrección crítica de IA:</strong> Independicé a cada enemigo con instancias separadas.</li><li data-i18n="soplos_tech_3"><strong>Pruebas y debugging:</strong> Validación exhaustiva de mecánicas principales.</li><li data-i18n="soplos_tech_4"><strong>Colisiones:</strong> Depuración de interacciones físicas jugador/enemigos/entorno.</li></ul></section>
+</div>
+<aside class="detalle-sidebar">
+<div class="detalle-info-card"><h3 data-i18n="info_title">Info</h3><ul><li><strong data-i18n="info_engine">Motor:</strong> Construct 3</li><li><strong data-i18n="info_genre">Género:</strong> <span data-i18n="genre_2d_adventure">2D / Aventura</span></li><li><strong data-i18n="info_platform">Plataforma:</strong> Web (HTML5)</li><li><strong data-i18n="info_duration">Duración:</strong> 72 horas</li></ul></div>
+<div class="detalle-info-card"><h3 data-i18n="my_contribution">Mi contribución</h3><div class="contribucion-bar"><div class="contribucion-fill" style="width:50%"></div></div><p class="contribucion-label" data-i18n="soplos_contrib">~50% — IA y debugging</p></div>
+<div class="detalle-info-card"><h3 data-i18n="links_title">Enlaces</h3><a href="https://jonathan-franco-santana.itch.io/soplo-de-vida" class="btn-demo" target="_blank" rel="noopener" style="width:100%;justify-content:center"><i class="fab fa-itch-io"></i> <span data-i18n="btn_play_itch">Jugar en itch.io</span></a></div>
+</aside>
+</div>
+</article>
+</main>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 Sebastián Franco Gomez</p>
-        </div>
-    </footer>
+<footer><div class="container"><p data-i18n="footer_simple">&copy; 2026 Sebastián Franco Gomez</p></div></footer>
+<script src="js/lang.js"></script>
+<script src="js/carrusel.js"></script>
 </body>
 </html>

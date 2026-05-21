@@ -1,117 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I have no enemies - Sebastián Franco</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .proyecto-detalle {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        .proyecto-detalle h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-        .proyecto-detalle .media {
-            margin: 30px 0;
-        }
-        .proyecto-detalle img {
-            width: 100%;
-            border-radius: 12px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 40px;
-            color: #2d9cdb;
-            text-decoration: none;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        .proyecto-detalle h2 {
-            color: #2d9cdb;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        .tech-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .tech-list li {
-            margin-bottom: 10px;
-            padding-left: 24px;
-            position: relative;
-        }
-        .tech-list li::before {
-            content: "▹";
-            color: #2d9cdb;
-            position: absolute;
-            left: 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I have no enemies — Sebastián Franco</title>
+<meta name="description" content="Game jam de 36 horas. Enemigo con máquina de estados, detección por raycast y luces dinámicas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/proyecto-detalle.css">
 </head>
-<body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <a href="index.html">S. Franco</a>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html#about">Sobre Mí</a>
-                <a href="index.html#proyectos">Proyectos</a>
-                <a href="index.html#skills">Skills</a>
-                <a href="index.html#contacto">Contacto</a>
-                <a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank">📄 CV</a>
-            </nav>
-        </div>
-    </header>
+<body class="proyecto-page">
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<header>
+<div class="container header-content">
+<div class="logo">
+<a href="index.html">S<span class="logo-dot">.</span>Franco</a>
+<div class="header-fly-title" aria-hidden="true">I have no enemies</div>
+</div>
+<nav class="nav-links" id="navMenu">
+<button class="menu-close-btn" id="menuCloseBtn" data-i18n-aria="aria_close_menu" aria-label="Cerrar menú">&times;</button>
+<a href="index.html#proyectos" data-i18n="btn_back">← Volver</a>
+<a href="index.html#about" data-i18n="nav_about">Sobre mí</a>
+<a href="index.html#contacto" data-i18n="nav_contact">Contacto</a>
+<a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> CV</a>
+</nav>
+<div class="header-actions">
+<button class="lang-toggle" id="langToggle" data-i18n-aria="aria_switch_en" aria-label="Cambiar idioma">
+<span class="lang-flag">🇺🇸</span> <span class="lang-label">EN</span>
+</button>
+<button class="menu-toggle" id="menuToggle" data-i18n-aria="aria_open_menu" aria-label="Abrir menú">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
 
-    <main>
-        <div class="proyecto-detalle">
-            <a href="index.html" class="back-link">← Volver al portafolio</a>
-            <h1>I have no enemies</h1>
-            <p><strong>Rol:</strong> Programador de IA y sistemas</p>
-            <p><strong>Tecnologías:</strong> Unity, C#, Máquinas de estado, Raycast</p>
-            <p><strong>Duración:</strong> Game Jam de 36 horas</p>
-            
-            <div class="media">
-                <img src="ienemies-demo.gif" alt="Gameplay I have no enemies">
-            </div>
-            
-            <h2>📖 ¿Cómo fue?</h2>
-            <p>Este proyecto nació en una game jam de 36 horas, donde asumí el rol principal en la programación de la IA y los sistemas de interacción. Fue un reto muy interesante porque el enemigo no seguía el patrón típico de "perseguir al jugador", sino que tenía comportamientos únicos: huir con un objeto clave y quedarse quieto en ciertas condiciones.</p>
-            <p>El equipo era pequeño pero enfocado, lo que permitió iterar rápido. Aprendí mucho sobre máquinas de estado y detección por raycast en 2D.</p>
-            
-            <h2>💡 ¿Cómo me sentí?</h2>
-            <p>Muy orgulloso de haber logrado que el enemigo tuviera comportamientos diferenciados y coherentes en tan poco tiempo. El momento más satisfactorio fue ver cómo el enemigo detectaba al jugador, agarraba el gato y huía de manera creíble. También disfruté mucho implementando el sistema de luces dinámicas, que le dio un ambiente más inmersivo al juego.</p>
-            
-            <h2>🔧 Detalles técnicos</h2>
-            <ul class="tech-list">
-                <li><strong>Máquina de estados:</strong> 3 modos de comportamiento: <em>Patrullar</em> (movimiento base), <em>Huir</em> (al detectar al jugador con raycast, agarra un objeto y se aleja) y <em>Tranqui</em> (se desactiva la IA por acción del jugador).</li>
-                <li><strong>Detección visual con Raycast:</strong> El enemigo usa raycasts en 2D para detectar al jugador. Si lo ve, cambia al estado de huida.</li>
-                <li><strong>Sistema de luces dinámicas:</strong> Luces que se encienden cuando el jugador pasa cerca y se apagan después, con sombras en tiempo real.</li>
-                <li><strong>Objeto clave (gato):</strong> El enemigo puede agarrar un objeto y llevárselo como parte de su mecánica de huida.</li>
-            </ul>
-            
-            <h2>📊 Mi contribución</h2>
-            <p>Implementé aproximadamente el <strong>70% de la IA y sistemas de interacción</strong> del juego, incluyendo la máquina de estados completa, el sistema de detección por raycast, y las luces dinámicas.</p>
-            
-            <a href="https://sebastian-franco-gomez.itch.io/i-have-no-enemis" class="btn-demo" target="_blank">Itch.io</a>
-        </div>
-    </main>
+<main>
+<article class="proyecto-detalle">
+<a href="index.html#proyectos" class="back-link" data-i18n="back_portfolio"><i class="fas fa-arrow-left"></i> Volver al portafolio</a>
+<header class="detalle-hero">
+<h1>I have no enemies</h1>
+<div class="detalle-meta">
+<span class="detalle-rol" data-i18n="rol_ai_programmer">Programador IA</span>
+<span class="detalle-badge" data-i18n="badge_gamejam_36h">Game Jam 36h</span>
+</div>
+<div class="detalle-tags">
+<span class="tag tag-proyecto">Unity</span>
+<span class="tag tag-proyecto">C#</span>
+<span class="tag tag-proyecto" data-i18n="tag_state_machines">Máquinas de estado</span>
+<span class="tag tag-proyecto">Raycast</span>
+</div>
+</header>
+<div class="detalle-media"><img src="ienemies-demo.gif" alt="Gameplay de I have no enemies"></div>
+<div class="detalle-grid">
+<div class="detalle-main">
+<section class="detalle-block"><h2><i class="fas fa-book-open"></i> <span data-i18n="section_about_project">Sobre el proyecto</span></h2><p data-i18n="ienemies_about"><strong>I have no enemies</strong> nació en una game jam de 36 horas. El desafío era crear un enemigo con comportamientos no convencionales: en lugar de simplemente perseguir al jugador, el enemigo huye con un objeto clave cuando detecta al jugador y tiene estados de comportamiento únicos.</p><p data-i18n="ienemies_about_2">Asumí el rol principal en la programación de la IA y los sistemas de interacción. El equipo era pequeño pero enfocado, lo que permitió iterar muy rápido.</p></section>
+<section class="detalle-block"><h2><i class="fas fa-heart"></i> <span data-i18n="section_how_i_felt">Cómo me sentí</span></h2><p data-i18n="ienemies_felt">Muy orgulloso de haber logrado que el enemigo tuviera comportamientos diferenciados y coherentes en tan poco tiempo. El momento más satisfactorio fue ver cómo el enemigo detectaba al jugador, agarraba el gato y huía de manera creíble.</p></section>
+<section class="detalle-block"><h2><i class="fas fa-cogs"></i> <span data-i18n="section_tech_details">Detalles técnicos</span></h2><ul class="tech-list"><li data-i18n="ienemies_tech_1"><strong>Máquina de estados:</strong> 3 modos — <em>Patrullar</em> (movimiento base), <em>Huir</em> (detecta al jugador con raycast, agarra el gato y se aleja) y <em>Tranqui</em> (IA desactivada).</li><li data-i18n="ienemies_tech_2"><strong>Detección visual con Raycast:</strong> Raycasts en 2D para detectar al jugador en su campo de visión.</li><li data-i18n="ienemies_tech_3"><strong>Sistema de luces dinámicas:</strong> Luces que se encienden al pasar cerca y se apagan después, con sombras en tiempo real.</li><li data-i18n="ienemies_tech_4"><strong>Objeto clave (gato):</strong> El enemigo agarra y huye con él; el jugador debe impedirlo.</li></ul></section>
+</div>
+<aside class="detalle-sidebar">
+<div class="detalle-info-card"><h3 data-i18n="info_title">Info</h3><ul><li><strong data-i18n="info_engine">Motor:</strong> Unity 2D</li><li><strong data-i18n="info_genre">Género:</strong> <span data-i18n="genre_stealth_puzzle">Sigilo / Puzzle</span></li><li><strong data-i18n="info_platform">Plataforma:</strong> PC</li><li><strong data-i18n="info_duration">Duración:</strong> 36 horas</li></ul></div>
+<div class="detalle-info-card"><h3 data-i18n="my_contribution">Mi contribución</h3><div class="contribucion-bar"><div class="contribucion-fill" style="width:70%"></div></div><p class="contribucion-label" data-i18n="ienemies_contrib">~70% — IA y sistemas</p></div>
+<div class="detalle-info-card"><h3 data-i18n="links_title">Enlaces</h3><a href="https://sebastian-franco-gomez.itch.io/i-have-no-enemis" class="btn-demo" target="_blank" rel="noopener" style="width:100%;justify-content:center"><i class="fab fa-itch-io"></i> <span data-i18n="btn_play_itch">Jugar en itch.io</span></a></div>
+</aside>
+</div>
+</article>
+</main>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 Sebastián Franco Gomez</p>
-        </div>
-    </footer>
+<footer><div class="container"><p data-i18n="footer_simple">&copy; 2026 Sebastián Franco Gomez</p></div></footer>
+<script src="js/lang.js"></script>
+<script src="js/carrusel.js"></script>
 </body>
 </html>

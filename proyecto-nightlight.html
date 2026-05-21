@@ -1,98 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nightlight - Sebastián Franco</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .proyecto-detalle {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        .proyecto-detalle h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-        .proyecto-detalle .media {
-            margin: 30px 0;
-        }
-        .proyecto-detalle img {
-            width: 100%;
-            border-radius: 12px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 40px;
-            color: #2d9cdb;
-            text-decoration: none;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        .proyecto-detalle h2 {
-            color: #2d9cdb;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nightlight — Sebastián Franco</title>
+<meta name="description" content="Juego de sigilo 2D. Game jam 72h. IA con persecución, linterna, inventario y lógica de peso.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/proyecto-detalle.css">
 </head>
-<body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <a href="index.html">S. Franco</a>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html#about">Sobre Mí</a>
-                <a href="index.html#proyectos">Proyectos</a>
-                <a href="index.html#skills">Skills</a>
-                <a href="index.html#contacto">Contacto</a>
-                <a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank">📄 CV</a>
-            </nav>
-        </div>
-    </header>
+<body class="proyecto-page">
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<header>
+<div class="container header-content">
+<div class="logo">
+<a href="index.html">S<span class="logo-dot">.</span>Franco</a>
+<div class="header-fly-title" aria-hidden="true">Nightlight</div>
+</div>
+<nav class="nav-links" id="navMenu">
+<button class="menu-close-btn" id="menuCloseBtn" data-i18n-aria="aria_close_menu" aria-label="Cerrar menú">&times;</button>
+<a href="index.html#proyectos" data-i18n="btn_back">← Volver</a>
+<a href="index.html#about" data-i18n="nav_about">Sobre mí</a>
+<a href="index.html#contacto" data-i18n="nav_contact">Contacto</a>
+<a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> CV</a>
+</nav>
+<div class="header-actions">
+<button class="lang-toggle" id="langToggle" data-i18n-aria="aria_switch_en" aria-label="Cambiar idioma">
+<span class="lang-flag">🇺🇸</span> <span class="lang-label">EN</span>
+</button>
+<button class="menu-toggle" id="menuToggle" data-i18n-aria="aria_open_menu" aria-label="Abrir menú">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
 
-    <main>
-        <div class="proyecto-detalle">
-            <a href="index.html" class="back-link">← Volver al portafolio</a>
-            <h1>Nightlight</h1>
-            <p><strong>Rol:</strong> Programador Principal</p>
-            <p><strong>Tecnologías:</strong> Unity, C#, Input System</p>
-            
-            <div class="media">
-                <img src="nightlight-demo.gif" alt="Gameplay Nightlight">
-            </div>
-            
-            <h2>📖 ¿Cómo fue?</h2>
-            <p>Nightlight nació en una game jam de 72 horas. Fue un proyecto grupal donde asumí el rol de programador principal, encargándome de aproximadamente el 65% de las mecánicas totales del juego. El mayor reto fue coordinar la integración de la UI con los sistemas internos, ya que el equipo artístico nos proporcionaba los assets sobre la marcha.</p>
-            
-            <h2>💡 ¿Cómo me sentí?</h2>
-            <p>Muy satisfecho. Ver cómo la IA del enemigo reaccionaba al jugador, cómo el sistema de peso afectaba la velocidad y cómo todo fluía junto me dio mucha confianza. Aprendí a trabajar bajo presión de tiempo real y a priorizar funcionalidades clave para entregar un juego jugable al final de la jam.</p>
-            
-            <h2>🔧 Detalles técnicos</h2>
-            <ul>
-                <li><strong>IA del enemigo:</strong> Máquina de estados con patrullaje, detección visual/auditiva, búsqueda y caza.</li>
-                <li><strong>Inventario:</strong> Sistema limitado a un solo objeto, con lógica de recogida y uso.</li>
-                <li><strong>Sistema de peso:</strong> Cada objeto tiene un valor que afecta la velocidad de movimiento del jugador.</li>
-                <li><strong>Puzzle de peso:</strong> Una puerta solo se abre si el jugador alcanza cierto umbral de peso.</li>
-                <li><strong>Menús funcionales:</strong> Pausa, game over y victoria, integrados con las mecánicas principales.</li>
-            </ul>
-            
-            <a href="https://sebastian-franco-gomez.itch.io/nightlight" target="_blank" class="btn-demo">Itch.io</a>
-        </div>
-    </main>
+<main>
+<article class="proyecto-detalle">
+<a href="index.html#proyectos" class="back-link" data-i18n="back_portfolio"><i class="fas fa-arrow-left"></i> Volver al portafolio</a>
+<header class="detalle-hero">
+<h1>Nightlight</h1>
+<div class="detalle-meta">
+<span class="detalle-rol" data-i18n="rol_lead_programmer">Programador Principal</span>
+<span class="detalle-badge" data-i18n="badge_gamejam_72h">Game Jam 72h</span>
+</div>
+<div class="detalle-tags">
+<span class="tag tag-proyecto">Unity</span>
+<span class="tag tag-proyecto">C#</span>
+<span class="tag tag-proyecto">2D Top-Down</span>
+<span class="tag tag-proyecto" data-i18n="tag_stealth">Sigilo</span>
+</div>
+</header>
+<div class="detalle-media"><img src="nightlight-demo.gif" alt="Gameplay de Nightlight"></div>
+<div class="detalle-grid">
+<div class="detalle-main">
+<section class="detalle-block"><h2><i class="fas fa-book-open"></i> <span data-i18n="section_about_project">Sobre el proyecto</span></h2><p data-i18n="nightlight_about"><strong>Nightlight</strong> es un juego de sigilo 2D top-down. Despiertas en la noche y una criatura te acecha. Debes encontrar la llave para escapar usando tu linterna con batería limitada y un inventario con lógica de peso.</p><p data-i18n="nightlight_about_2">Nació en una game jam de 72 horas. Fui programador principal (~65% de las mecánicas).</p></section>
+<section class="detalle-block"><h2><i class="fas fa-heart"></i> <span data-i18n="section_how_i_felt">Cómo me sentí</span></h2><p data-i18n="nightlight_felt">Muy satisfecho. Ver cómo la IA reaccionaba al jugador —patrullando, detectando, cazando— y cómo el sistema de peso afectaba la experiencia me dio mucha confianza.</p></section>
+<section class="detalle-block"><h2><i class="fas fa-cogs"></i> <span data-i18n="section_tech_details">Detalles técnicos</span></h2><ul class="tech-list"><li data-i18n="nightlight_tech_1"><strong>IA del enemigo:</strong> Máquina de estados con patrullaje, detección visual/auditiva, búsqueda y caza.</li><li data-i18n="nightlight_tech_2"><strong>Sistema de linterna:</strong> Direccional con batería limitada que atrae al enemigo.</li><li data-i18n="nightlight_tech_3"><strong>Inventario:</strong> 1 objeto, con recogida, inspección y uso.</li><li data-i18n="nightlight_tech_4"><strong>Lógica de peso:</strong> Afecta velocidad del jugador. Puzzle: puerta requiere umbral de peso.</li><li data-i18n="nightlight_tech_5"><strong>Menús:</strong> Pausa, game over y victoria integrados.</li></ul></section>
+</div>
+<aside class="detalle-sidebar">
+<div class="detalle-info-card"><h3 data-i18n="info_title">Info</h3><ul><li><strong data-i18n="info_engine">Motor:</strong> Unity 2D</li><li><strong data-i18n="info_genre">Género:</strong> <span data-i18n="genre_stealth_puzzle">Sigilo / Puzzle</span></li><li><strong data-i18n="info_platform">Plataforma:</strong> PC</li><li><strong data-i18n="info_duration">Duración:</strong> 72 horas</li></ul></div>
+<div class="detalle-info-card"><h3 data-i18n="my_contribution">Mi contribución</h3><div class="contribucion-bar"><div class="contribucion-fill" style="width:65%"></div></div><p class="contribucion-label" data-i18n="nightlight_contrib">~65% — Mecánicas principales</p></div>
+<div class="detalle-info-card"><h3 data-i18n="links_title">Enlaces</h3><a href="https://sebastian-franco-gomez.itch.io/nightlight" class="btn-demo" target="_blank" rel="noopener" style="width:100%;justify-content:center"><i class="fab fa-itch-io"></i> <span data-i18n="btn_play_itch">Jugar en itch.io</span></a></div>
+</aside>
+</div>
+</article>
+</main>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 Sebastián Franco Gomez</p>
-        </div>
-    </footer>
+<footer><div class="container"><p data-i18n="footer_simple">&copy; 2026 Sebastián Franco Gomez</p></div></footer>
+<script src="js/lang.js"></script>
+<script src="js/carrusel.js"></script>
 </body>
 </html>

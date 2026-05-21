@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T.E.P.T 1945 — Sebastián Franco</title>
+<meta name="description" content="Tower defense 3D con ciclo día/noche, IA adaptativa, shaders personalizados y cinemáticas. Proyecto final.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/proyecto-detalle.css">
+</head>
+<body class="proyecto-page">
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<header>
+<div class="container header-content">
+<div class="logo">
+<a href="index.html">S<span class="logo-dot">.</span>Franco</a>
+<div class="header-fly-title" aria-hidden="true">T.E.P.T 1945</div>
+</div>
+<nav class="nav-links" id="navMenu">
+<button class="menu-close-btn" id="menuCloseBtn" data-i18n-aria="aria_close_menu" aria-label="Cerrar menú">&times;</button>
+<a href="index.html#proyectos" data-i18n="btn_back">← Volver</a>
+<a href="index.html#about" data-i18n="nav_about">Sobre mí</a>
+<a href="index.html#contacto" data-i18n="nav_contact">Contacto</a>
+<a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> CV</a>
+</nav>
+<div class="header-actions">
+<button class="lang-toggle" id="langToggle" data-i18n-aria="aria_switch_en" aria-label="Cambiar idioma">
+<span class="lang-flag">🇺🇸</span> <span class="lang-label">EN</span>
+</button>
+<button class="menu-toggle" id="menuToggle" data-i18n-aria="aria_open_menu" aria-label="Abrir menú">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
+
+<main>
+<article class="proyecto-detalle">
+<a href="index.html#proyectos" class="back-link" data-i18n="back_portfolio"><i class="fas fa-arrow-left"></i> Volver al portafolio</a>
+
+<header class="detalle-hero">
+<h1>T.E.P.T 1945</h1>
+<div class="detalle-meta">
+<span class="detalle-rol" data-i18n="rol_game_programmer">Game Programmer</span>
+<span class="detalle-badge" data-i18n="badge_final_project">Proyecto Final</span>
+</div>
+<div class="detalle-tags">
+<span class="tag tag-proyecto">Unity</span>
+<span class="tag tag-proyecto">C#</span>
+<span class="tag tag-proyecto" data-i18n="tag_tower_defense_3d">Tower Defense 3D</span>
+<span class="tag tag-proyecto">Shaders</span>
+<span class="tag tag-proyecto" data-i18n="tag_adaptive_ai">IA Adaptativa</span>
+</div>
+</header>
+
+<div class="detalle-media">
+<img src="tept-demo.gif" alt="Gameplay de T.E.P.T 1945">
+</div>
+
+<div class="detalle-grid">
+<div class="detalle-main">
+<section class="detalle-block">
+<h2><i class="fas fa-book-open"></i> <span data-i18n="section_about_project">Sobre el proyecto</span></h2>
+<p data-i18n="tept_about_p1"><strong>T.E.P.T 1945</strong> es un tower defense 3D ambientado en la Segunda Guerra Mundial con un ciclo dinámico de día y noche. Los enemigos tienen comportamientos adaptativos que cambian según la hora del día: de día atacan las defensas del jugador, y de noche persiguen al jugador directamente.</p>
+<p data-i18n="tept_about_p2">Fue mi proyecto final del bootcamp, donde integré todo lo aprendido: shaders personalizados, IA con comportamientos diferenciados, persistencia de datos con PlayerPrefs, cinemáticas con Cinemachine y un sistema de oleadas progresivo.</p>
+</section>
+<section class="detalle-block">
+<h2><i class="fas fa-heart"></i> <span data-i18n="section_how_i_felt">Cómo me sentí</span></h2>
+<p data-i18n="tept_felt">Este proyecto fue el más ambicioso que he desarrollado hasta ahora. Sentí mucha satisfacción al ver cómo los shaders que creé desde cero (el aura de los enemigos, la luz falsa 3D y la transparencia selectiva) le daban una identidad visual única al juego. El reto más grande fue lograr que la IA se sintiera orgánica tanto de día como de noche, y que la persistencia de datos funcionara correctamente para guardar el progreso del jugador.</p>
+</section>
+<section class="detalle-block">
+<h2><i class="fas fa-cogs"></i> <span data-i18n="section_tech_details">Detalles técnicos</span></h2>
+<ul class="tech-list">
+<li data-i18n="tept_tech_1"><strong>IA adaptativa:</strong> De día, los enemigos siguen un pathfinding hacia las torres para atacarlas. De noche, cambian a estado de persecución directa al jugador con detección visual usando raycasts.</li>
+<li data-i18n="tept_tech_2"><strong>Shader de aura:</strong> Efecto pulsante en enemigos usando vertex displacement y gradiente de color con efecto Fresnel en Shader Graph.</li>
+<li data-i18n="tept_tech_3"><strong>Shader de luz falsa 3D:</strong> Simulación de iluminación volumétrica usando planos rotados con transparencia, sin necesidad de luces reales (optimización de rendimiento).</li>
+<li data-i18n="tept_tech_4"><strong>Shader de transparencia selectiva:</strong> Cuando un objeto obstruye la cámara entre el jugador y la acción, el shader aplica dithering para volverlo semitransparente.</li>
+<li data-i18n="tept_tech_5"><strong>Persistencia de datos:</strong> Sistema de guardado con PlayerPrefs para progreso del jugador (nivel alcanzado, recursos acumulados, configuraciones).</li>
+<li data-i18n="tept_tech_6"><strong>Cinemáticas:</strong> Secuencias con Cinemachine + Timeline para la introducción y las transiciones día/noche.</li>
+</ul>
+</section>
+</div>
+<aside class="detalle-sidebar">
+<div class="detalle-info-card"><h3 data-i18n="info_title">Info</h3><ul><li><strong data-i18n="info_engine">Motor:</strong> Unity (URP)</li><li><strong data-i18n="info_genre">Género:</strong> <span data-i18n="tag_tower_defense_3d">Tower Defense 3D</span></li><li><strong data-i18n="info_platform">Plataforma:</strong> PC</li><li><strong data-i18n="info_duration">Duración:</strong> ~3 semanas</li></ul></div>
+<div class="detalle-info-card"><h3 data-i18n="my_contribution">Mi contribución</h3><div class="contribucion-bar"><div class="contribucion-fill" style="width:100%"></div></div><p class="contribucion-label" data-i18n="tept_contrib">100% — Desarrollo completo</p></div>
+<div class="detalle-info-card"><h3 data-i18n="links_title">Enlaces</h3><a href="https://sebastian-franco-gomez.itch.io/tept-1945" class="btn-demo" target="_blank" rel="noopener" style="width:100%;justify-content:center"><i class="fab fa-itch-io"></i> <span data-i18n="btn_play_itch">Jugar en itch.io</span></a></div>
+</aside>
+</div>
+
+<div class="detalle-gallery"><h2 data-i18n="gallery_title">Galería</h2><p style="color:var(--text-secondary);margin-bottom:20px" data-i18n="tept_gallery_soon">Próximamente: GIFs adicionales del shader de aura, la luz falsa 3D y la transparencia selectiva en acción.</p></div>
+</article>
+</main>
+
+<footer><div class="container"><p data-i18n="footer_simple">&copy; 2026 Sebastián Franco Gomez</p></div></footer>
+<script src="js/lang.js"></script>
+<script src="js/carrusel.js"></script>
+</body>
+</html>

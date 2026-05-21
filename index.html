@@ -1,234 +1,388 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastián Franco - Unity Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sebastián Franco - Unity Developer. Portafolio profesional con proyectos de desarrollo de videojuegos, VFX y shaders.">
+<title>Sebastián Franco — Unity Developer & VFX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <a href="index.html">S. Franco</a>
-            </div>
-            <nav class="nav-links">
-                <a href="#about">Sobre Mí</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#skills">Skills</a>
-                <a href="#contacto">Contacto</a>
-                <a href="https://docs.google.com/document/d/1ZCxHGOK-E3wCAAMovwbhQ3uwSNEnI1HQ/edit?usp=sharing&ouid=102209303394914323646&rtpof=true&sd=true" class="btn-cv" target="_blank">📄 CV</a>
-            </nav>
-        </div>
-    </header>
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<header>
+<div class="container header-content">
+<div class="logo">
+<a href="index.html">S<span class="logo-dot">.</span>Franco</a>
+</div>
+<nav class="nav-links" id="navMenu">
+<button class="menu-close-btn" id="menuCloseBtn" data-i18n-aria="aria_close_menu" aria-label="Cerrar menú">&times;</button>
+<a href="#about" data-i18n="nav_about">Sobre mí</a>
+<a href="#proyectos" data-i18n="nav_projects">Proyectos</a>
+<a href="#vfx" data-i18n="nav_vfx">VFX</a>
+<a href="#skills" data-i18n="nav_skills">Skills</a>
+<a href="#contacto" data-i18n="nav_contact">Contacto</a>
+<a href="CV_Sebastian_Franco.pdf" class="btn-cv" target="_blank" rel="noopener">
+<i class="fas fa-file-alt"></i> CV
+</a>
+</nav>
+<div class="header-actions">
+<button class="lang-toggle" id="langToggle" data-i18n-aria="aria_switch_en" aria-label="Cambiar idioma">
+<span class="lang-flag">🇺🇸</span> <span class="lang-label">EN</span>
+</button>
+<button class="menu-toggle" id="menuToggle" data-i18n-aria="aria_open_menu" aria-label="Abrir menú">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h1>Sebastián Franco</h1>
-                    <h2>Unity Developer</h2>
-                    <p>Construyendo experiencias interactivas optimizadas con C# y Unity. Enfoque en gameplay, sistemas 3D/2D y código limpio.</p>
-                    <div class="hero-links">
-                        <a href="https://www.linkedin.com/in/sebastian-franco-2007---/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/sebas-50" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#contacto" class="btn-primary">Contactar</a>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">C#</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">Input System</span>
-                        <span class="tag">Cinemachine</span>
-                        <span class="tag">Físicas 3D</span>
-                        <span class="tag">Debugging</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+<main>
+<section class="hero">
+<div class="container hero-content">
+<div class="hero-text">
+<p class="hero-greeting" data-i18n="hero_greeting">Hola, soy</p>
+<h1>Sebastián Franco</h1>
+<h2 data-i18n="hero_role">Unity Developer <span class="hero-separator">|</span> VFX Artist</h2>
+<p class="hero-desc" data-i18n="hero_desc">Construyo experiencias interactivas con C#, Unity y shaders. Especializado en IA de NPCs, sistemas de gameplay y efectos visuales en tiempo real.</p>
+<div class="hero-actions">
+<a href="#proyectos" class="btn-primary" data-i18n="hero_btn_projects">Ver proyectos</a>
+<a href="#contacto" class="btn-outline" data-i18n="hero_btn_contact">Contactar</a>
+</div>
+<div class="hero-social">
+<a href="https://www.linkedin.com/in/sebastian-franco-2007---/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://github.com/sebas-50" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+<a href="mailto:sfrancohappy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+</div>
+<div class="skill-tags">
+<span class="tag">Unity</span>
+<span class="tag">C#</span>
+<span class="tag">Shader Graph</span>
+<span class="tag">Input System</span>
+<span class="tag">Cinemachine</span>
+<span class="tag">Git</span>
+<span class="tag">Construct 3</span>
+<span class="tag" data-i18n="tag_physics3d">Físicas 3D</span>
+</div>
+</div>
+</div>
+</section>
 
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">Sobre mí</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Soy Desarrollador Unity con experiencia en mecánicas de gameplay usando C#: movimiento, físicas 3D, colisiones y el nuevo Input System. Mi formación como Técnico en Sistemas me da una base sólida en resolución de problemas y lógica estructurada.</p>
-                        <p>Me especializo en <strong>IA y comportamiento de NPCs</strong> —enemigos con patrullaje, persecución, detección visual/auditiva y reacciones únicas. He participado en game jams de 36 y 72 horas, y mis proyectos están publicados en itch.io.</p>
-                        <p>Actualmente manejo Git, trabajo en equipo multidisciplinario y sigo formándome en optimización y persistencia de datos.</p>
-                    </div>
-                    <div class="skills-box" id="skills">
-                        <h3>Habilidades Técnicas</h3>
-                        <div class="skills-grid">
-                            <span class="skill-item">Unity</span>
-                            <span class="skill-item">C#</span>
-                            <span class="skill-item">Git/GitHub</span>
-                            <span class="skill-item">Input System</span>
-                            <span class="skill-item">Cinemachine</span>
-                            <span class="skill-item">Físicas 3D</span>
-                            <span class="skill-item">Colisiones</span>
-                            <span class="skill-item">Debugging</span>
-                            <span class="skill-item">Construct 3</span>
-                        </div>
-                        <h3 style="margin-top: 30px;">Habilidades Blandas</h3>
-                        <div class="skills-grid">
-                            <span class="skill-item">Adaptación</span>
-                            <span class="skill-item">Flexibilidad</span>
-                            <span class="skill-item">Trabajo en equipo</span>
-                            <span class="skill-item">Creatividad</span>
-                            <span class="skill-item">Gestión del tiempo</span>
-                            <span class="skill-item">Pensamiento crítico</span>
-                            <span class="skill-item">Proactividad</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="about" class="section">
+<div class="container">
+<h2 class="section-title"><span class="title-accent">01.</span> <span data-i18n="about_title">Sobre mí</span></h2>
+<div class="about-content">
+<div class="about-text">
+<p data-i18n="about_p1">Soy Desarrollador Unity con experiencia en mecánicas de gameplay usando C#: movimiento, físicas 3D, colisiones y el nuevo Input System. Mi formación como Técnico en Sistemas me da una base sólida en resolución de problemas y lógica estructurada.</p>
+<p data-i18n="about_p2">Me especializo en <strong>IA y comportamiento de NPCs</strong> —enemigos con patrullaje, persecución, detección visual/auditiva y reacciones únicas— y en <strong>efectos visuales con shaders</strong>: auras, luces falsas 3D, transparencia selectiva y post-procesado. He participado en game jams de 36 y 72 horas, y mis proyectos están publicados en itch.io.</p>
+<p data-i18n="about_p3">Actualmente manejo Git, trabajo en equipo multidisciplinario y sigo formándome en optimización y persistencia de datos.</p>
+</div>
+<div class="skills-box" id="skills">
+<h3 data-i18n="skills_tech_title">Habilidades Técnicas</h3>
+<div class="skills-grid skills-tech">
+<span class="skill-item">Unity</span>
+<span class="skill-item">C#</span>
+<span class="skill-item">Shader Graph</span>
+<span class="skill-item">Git/GitHub</span>
+<span class="skill-item">Input System</span>
+<span class="skill-item">Cinemachine</span>
+<span class="skill-item" data-i18n="skill_physics3d">Físicas 3D</span>
+<span class="skill-item">Construct 3</span>
+<span class="skill-item">Debugging</span>
+</div>
+<h3 data-i18n="skills_soft_title">Habilidades Blandas</h3>
+<div class="skills-grid skills-soft">
+<span class="skill-item" data-i18n="soft_adaptation">Adaptación</span>
+<span class="skill-item" data-i18n="soft_flexibility">Flexibilidad</span>
+<span class="skill-item" data-i18n="soft_teamwork">Trabajo en equipo</span>
+<span class="skill-item" data-i18n="soft_creativity">Creatividad</span>
+<span class="skill-item" data-i18n="soft_time">Gestión del tiempo</span>
+<span class="skill-item" data-i18n="soft_critical">Pensamiento crítico</span>
+<span class="skill-item" data-i18n="soft_proactivity">Proactividad</span>
+</div>
+<button class="btn-expand-skills" id="btnExpandSkills" data-i18n-aria="skills_see_all_aria" aria-label="Ver todas las habilidades" data-i18n="skills_see_all">
+Ver todas <i class="fas fa-chevron-down"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
 
-                <!-- PROYECTOS SECTION -->
-        <section id="proyectos" class="section">
-            <div class="container">
-                <h2 class="section-title">Proyectos Destacados</h2>
-                
-                <div class="proyectos-grid">
-                    <!-- Nightlight -->
-                    <a href="proyecto-nightlight.html" class="proyecto-card-link">
-                        <div class="proyecto-card">
-                            <div class="proyecto-media">
-                                <img src="nightlight-demo.gif" alt="Nightlight gameplay" style="width:100%; height:100%; object-fit:cover;">
-                            </div>
-                            <div class="proyecto-content">
-                                <div class="proyecto-header">
-                                    <h3>Nightlight</h3>
-                                    <span class="proyecto-rol">Programador Principal</span>
-                                </div>
-                                <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
-                                    <span class="tag tag-proyecto">Unity</span>
-                                    <span class="tag tag-proyecto">C#</span>
-                                    <span class="tag tag-proyecto">2D Top-Down</span>
-                                    <span class="tag tag-proyecto">Stealth</span>
-                                </div>
-                                <p class="proyecto-desc">Juego de sigilo en 2D. Despiertas en la noche, una criatura acecha. Encuentra la llave y escapa.</p>
-                                <ul class="contribuciones">
-                                    <li><i class="fas fa-check-circle"></i> IA del enemigo: patrullaje, detección visual/auditiva, búsqueda y caza.</li>
-                                    <li><i class="fas fa-check-circle"></i> Sistema de linterna con batería limitada y recarga.</li>
-                                    <li><i class="fas fa-check-circle"></i> Inventario simple y lógica de peso.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
+<div class="skills-modal" id="skillsModal">
+<div class="skills-modal-backdrop" id="skillsModalBackdrop"></div>
+<div class="skills-modal-content">
+<button class="skills-modal-close" id="skillsModalClose" aria-label="Cerrar">&times;</button>
+<h2 data-i18n="modal_skills_title">Habilidades</h2>
+<h3 data-i18n="skills_tech_title">Habilidades Técnicas</h3>
+<div class="skills-grid skills-modal-grid">
+<span class="skill-item">Unity</span>
+<span class="skill-item">C#</span>
+<span class="skill-item">Shader Graph</span>
+<span class="skill-item">Git/GitHub</span>
+<span class="skill-item">Input System</span>
+<span class="skill-item">Cinemachine</span>
+<span class="skill-item" data-i18n="skill_physics3d">Físicas 3D</span>
+<span class="skill-item">Construct 3</span>
+<span class="skill-item">Debugging</span>
+</div>
+<h3 data-i18n="skills_soft_title">Habilidades Blandas</h3>
+<div class="skills-grid skills-modal-grid">
+<span class="skill-item" data-i18n="soft_adaptation">Adaptación</span>
+<span class="skill-item" data-i18n="soft_flexibility">Flexibilidad</span>
+<span class="skill-item" data-i18n="soft_teamwork">Trabajo en equipo</span>
+<span class="skill-item" data-i18n="soft_creativity">Creatividad</span>
+<span class="skill-item" data-i18n="soft_time">Gestión del tiempo</span>
+<span class="skill-item" data-i18n="soft_critical">Pensamiento crítico</span>
+<span class="skill-item" data-i18n="soft_proactivity">Proactividad</span>
+</div>
+</div>
+</div>
 
-                    <!-- I have no enemies -->
-                    <a href="proyecto-ienemies.html" class="proyecto-card-link">
-                        <div class="proyecto-card">
-                            <div class="proyecto-media">
-                                <img src="ienemies-demo.gif" alt="I have no enemies gameplay" style="width:100%; height:100%; object-fit:cover;">
-                            </div>
-                            <div class="proyecto-content">
-                                <div class="proyecto-header">
-                                    <h3>I have no enemies</h3>
-                                    <span class="proyecto-rol">Programador de IA</span>
-                                </div>
-                                <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
-                                    <span class="tag tag-proyecto">Unity</span>
-                                    <span class="tag tag-proyecto">C#</span>
-                                    <span class="tag tag-proyecto">2D Top-Down</span>
-                                    <span class="tag tag-proyecto">Máquinas de estado</span>
-                                </div>
-                                <p class="proyecto-desc">Game jam 36h. Enemigo con 3 estados: patrullaje, huida y "tranqui". Sistema de luces dinámicas.</p>
-                                <ul class="contribuciones">
-                                    <li><i class="fas fa-check-circle"></i> Máquina de estados: patrullar, huir (raycast al jugador) y tranqui.</li>
-                                    <li><i class="fas fa-check-circle"></i> Sistema de luces que se encienden/apagan con sombras en tiempo real.</li>
-                                    <li><i class="fas fa-check-circle"></i> Enemigo agarra un objeto (gato) y huye al detectar al jugador.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
+<section id="proyectos" class="section section-alt">
+<div class="container container-wide">
+<h2 class="section-title"><span class="title-accent">02.</span> <span data-i18n="projects_title">Proyectos Destacados</span></h2>
+<div class="proyectos-carrusel">
+<button class="carrusel-btn carrusel-btn-left" id="btnLeft" data-i18n-aria="aria_prev_project" aria-label="Proyecto anterior">
+<i class="fas fa-chevron-left"></i>
+</button>
+<div class="carrusel-viewport">
+<div class="carrusel-track" id="carruselTrack">
 
-                    <!-- Soplos de Vida -->
-                    <a href="proyecto-soplos.html" class="proyecto-card-link">
-                        <div class="proyecto-card">
-                            <div class="proyecto-media proyecto-1"></div>
-                            <div class="proyecto-content">
-                                <div class="proyecto-header">
-                                    <h3>Soplos de Vida</h3>
-                                    <span class="proyecto-rol">Programador</span>
-                                </div>
-                                <div class="skill-tags" style="margin-top: 0; margin-bottom: 15px;">
-                                    <span class="tag tag-proyecto">Construct 3</span>
-                                </div>
-                                <p class="proyecto-desc">Videojuego 2D. Implementación de mecánicas principales y corrección de bugs críticos de IA.</p>
-                                <ul class="contribuciones">
-                                    <li><i class="fas fa-check-circle"></i> Movimiento de personaje y persecución visual.</li>
-                                    <li><i class="fas fa-check-circle"></i> Corrección de IA compartida.</li>
-                                    <li><i class="fas fa-check-circle"></i> Pruebas, debugging y colisiones.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+<div class="proyecto-slide" data-index="0">
+<div class="proyecto-card">
+<div class="proyecto-media">
+<img src="tept-demo.gif" alt="T.E.P.T 1945 gameplay" loading="lazy">
+<div class="proyecto-media-badge" data-i18n="badge_final_project">Proyecto Final</div>
+</div>
+<div class="proyecto-content">
+<div class="proyecto-header">
+<h3>T.E.P.T 1945</h3>
+<span class="proyecto-rol" data-i18n="rol_game_programmer">Game Programmer</span>
+</div>
+<div class="proyecto-tags">
+<span class="tag tag-proyecto">Unity</span>
+<span class="tag tag-proyecto">C#</span>
+<span class="tag tag-proyecto" data-i18n="tag_tower_defense_3d">Tower Defense 3D</span>
+<span class="tag tag-proyecto">Shaders</span>
+<span class="tag tag-proyecto" data-i18n="tag_adaptive_ai">IA Adaptativa</span>
+</div>
+<p class="proyecto-desc" data-i18n="tept_desc">Tower defense 3D con ciclo día/noche. IA adaptativa, persistencia de datos, cinemáticas y shaders personalizados.</p>
+<div class="proyecto-links">
+<a href="proyecto-tept.html" class="btn-demo" data-i18n="btn_see_more">Ver más <i class="fas fa-arrow-right"></i></a>
+<a href="https://sebastian-franco-gomez.itch.io/tept-1945" class="btn-itch" target="_blank" rel="noopener"><i class="fab fa-itch-io"></i> itch.io</a>
+</div>
+</div>
+</div>
+</div>
 
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Formación</h2>
-                <div class="edu-item">
-                    <div class="edu-left">
-                        <h4>Desarrollador de Unity</h4>
-                        <p>Generation, Virtual, Colombia</p>
-                    </div>
-                    <div class="edu-right">Ene 2026 - En curso</div>
-                </div>
-                <div class="edu-item">
-                    <div class="edu-left">
-                        <h4>Tecnólogo en Análisis y Desarrollo de Software</h4>
-                        <p>SENA, Virtual, Colombia</p>
-                    </div>
-                    <div class="edu-right">Abr 2025 - En curso</div>
-                </div>
-                <div class="edu-item">
-                    <div class="edu-left">
-                        <h4>Técnico en Sistemas</h4>
-                        <p>SENA, Soacha, Colombia</p>
-                    </div>
-                    <div class="edu-right">May 2023 - Dic 2024</div>
-                </div>
-            </div>
-        </section>
+<div class="proyecto-slide" data-index="1">
+<div class="proyecto-card">
+<div class="proyecto-media">
+<img src="ienemies-demo.gif" alt="I have no enemies gameplay" loading="lazy">
+<div class="proyecto-media-badge" data-i18n="badge_gamejam_36h">Game Jam 36h</div>
+</div>
+<div class="proyecto-content">
+<div class="proyecto-header">
+<h3>I have no enemies</h3>
+<span class="proyecto-rol" data-i18n="rol_ai_programmer">Programador IA</span>
+</div>
+<div class="proyecto-tags">
+<span class="tag tag-proyecto">Unity</span>
+<span class="tag tag-proyecto">C#</span>
+<span class="tag tag-proyecto" data-i18n="tag_state_machines">Máquinas de estado</span>
+<span class="tag tag-proyecto">Raycast</span>
+</div>
+<p class="proyecto-desc" data-i18n="ienemies_desc">Game jam de 36 horas. Enemigo con 3 estados: patrullaje, huida y "tranqui". Luces dinámicas con sombras en tiempo real.</p>
+<div class="proyecto-links">
+<a href="proyecto-ienemies.html" class="btn-demo" data-i18n="btn_see_more">Ver más <i class="fas fa-arrow-right"></i></a>
+<a href="https://sebastian-franco-gomez.itch.io/i-have-no-enemis" class="btn-itch" target="_blank" rel="noopener"><i class="fab fa-itch-io"></i> itch.io</a>
+</div>
+</div>
+</div>
+</div>
 
-        <section id="contacto" class="section">
-            <div class="container contacto-info">
-                <h2 class="section-title">Contacto</h2>
-                <p>¿Tienes un proyecto en mente o quieres conversar sobre oportunidades? ¡Escríbeme!</p>
-                <div class="contacto-links">
-                    <a href="mailto:sfrancohappy@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/sebastian-franco-2007---/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/sebas-50" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
+<div class="proyecto-slide" data-index="2">
+<div class="proyecto-card">
+<div class="proyecto-media">
+<img src="nightlight-demo.gif" alt="Nightlight gameplay" loading="lazy">
+<div class="proyecto-media-badge" data-i18n="badge_gamejam_72h">Game Jam 72h</div>
+</div>
+<div class="proyecto-content">
+<div class="proyecto-header">
+<h3>Nightlight</h3>
+<span class="proyecto-rol" data-i18n="rol_lead_programmer">Programador Principal</span>
+</div>
+<div class="proyecto-tags">
+<span class="tag tag-proyecto">Unity</span>
+<span class="tag tag-proyecto">C#</span>
+<span class="tag tag-proyecto">2D Top-Down</span>
+<span class="tag tag-proyecto" data-i18n="tag_stealth">Sigilo</span>
+</div>
+<p class="proyecto-desc" data-i18n="nightlight_desc">Juego de sigilo 2D. Una criatura te acecha en la oscuridad. Encuentra la llave y escapa usando tu linterna e inventario.</p>
+<div class="proyecto-links">
+<a href="proyecto-nightlight.html" class="btn-demo" data-i18n="btn_see_more">Ver más <i class="fas fa-arrow-right"></i></a>
+<a href="https://sebastian-franco-gomez.itch.io/nightlight" class="btn-itch" target="_blank" rel="noopener"><i class="fab fa-itch-io"></i> itch.io</a>
+</div>
+</div>
+</div>
+</div>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 Sebastián Franco Gomez</p>
-        </div>
-    </footer>
+<div class="proyecto-slide" data-index="3">
+<div class="proyecto-card">
+<div class="proyecto-media">
+<img src="soplos-demo.gif" alt="Soplos de Vida gameplay" loading="lazy">
+</div>
+<div class="proyecto-content">
+<div class="proyecto-header">
+<h3 data-i18n="soplos_title">Soplos de Vida</h3>
+<span class="proyecto-rol" data-i18n="rol_programmer">Programador</span>
+</div>
+<div class="proyecto-tags">
+<span class="tag tag-proyecto">Construct 3</span>
+<span class="tag tag-proyecto">2D</span>
+<span class="tag tag-proyecto">Debugging</span>
+</div>
+<p class="proyecto-desc" data-i18n="soplos_desc">Mi primera game jam. Implementación de mecánicas principales en Construct 3. Corrección de IA compartida y colisiones.</p>
+<div class="proyecto-links">
+<a href="proyecto-soplos.html" class="btn-demo" data-i18n="btn_see_more">Ver más <i class="fas fa-arrow-right"></i></a>
+<a href="https://jonathan-franco-santana.itch.io/soplo-de-vida" class="btn-itch" target="_blank" rel="noopener"><i class="fab fa-itch-io"></i> itch.io</a>
+</div>
+</div>
+</div>
+</div>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+</div>
+</div>
+<button class="carrusel-btn carrusel-btn-right" id="btnRight" data-i18n-aria="aria_next_project" aria-label="Proyecto siguiente">
+<i class="fas fa-chevron-right"></i>
+</button>
+</div>
+<div class="carrusel-indicadores" id="indicadores"></div>
+</div>
+</section>
+
+<section id="vfx" class="section">
+<div class="container">
+<h2 class="section-title"><span class="title-accent">03.</span> <span data-i18n="vfx_title">Efectos Visuales</span> <span class="title-vfx">VFX</span></h2>
+<p class="vfx-intro" data-i18n="vfx_intro">Shaders y efectos visuales desarrollados para mis proyectos en Unity. Cada uno representa un reto técnico distinto en renderizado en tiempo real.</p>
+<div class="vfx-carrusel-wrapper" id="vfxCarruselWrapper">
+<div class="vfx-grid" id="vfxGrid">
+<div class="vfx-card">
+<div class="vfx-media">
+<img src="tept-demo.gif" alt="Shader de aura para enemigos" loading="lazy">
+</div>
+<div class="vfx-content">
+<h3 data-i18n="vfx_aura_title">Aura enemigo</h3>
+<div class="vfx-meta">
+<span class="vfx-type shader">Shader</span>
+<span class="vfx-tech">Shader Graph · Vertex Displacement</span>
+</div>
+<p data-i18n="vfx_aura_desc">Efecto de aura pulsante en enemigos usando desplazamiento de vértices y gradiente de color con Fresnel.</p>
+</div>
+</div>
+<div class="vfx-card">
+<div class="vfx-media">
+<img src="tept-demo.gif" alt="Luz falsa 3D con planos rotados" loading="lazy">
+</div>
+<div class="vfx-content">
+<h3 data-i18n="vfx_light_title">Luz falsa 3D</h3>
+<div class="vfx-meta">
+<span class="vfx-type shader">Shader</span>
+<span class="vfx-tech">Shader Graph · Planos rotados</span>
+</div>
+<p data-i18n="vfx_light_desc">Falsa iluminación volumétrica generada con planos rotados que simulan haces de luz 3D sin coste de iluminación real.</p>
+</div>
+</div>
+<div class="vfx-card">
+<div class="vfx-media">
+<img src="tept-demo.gif" alt="Transparencia selectiva para estructuras" loading="lazy">
+</div>
+<div class="vfx-content">
+<h3 data-i18n="vfx_transparency_title">Transparencia selectiva</h3>
+<div class="vfx-meta">
+<span class="vfx-type shader">Shader</span>
+<span class="vfx-tech">Shader Graph · Dithering</span>
+</div>
+<p data-i18n="vfx_transparency_desc">Shader que vuelve transparentes las estructuras que obstruyen la vista del jugador usando dithering.</p>
+</div>
+</div>
+<div class="vfx-card">
+<div class="vfx-media">
+<img src="tept-demo.gif" alt="Bloom + viñeta para cámara de seguridad" loading="lazy">
+</div>
+<div class="vfx-content">
+<h3 data-i18n="vfx_camera_title">Cámara de seguridad</h3>
+<div class="vfx-meta">
+<span class="vfx-type post" data-i18n="vfx_type_post">Post-procesado</span>
+<span class="vfx-tech">URP · Bloom · Viñeta</span>
+</div>
+<p data-i18n="vfx_camera_desc">Post-procesado que simula una cámara de vigilancia: bloom intenso, viñeta oscura y grano.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section-alt">
+<div class="container">
+<h2 class="section-title"><span class="title-accent">04.</span> <span data-i18n="education_title">Formación</span></h2>
+<div class="edu-item">
+<div class="edu-left">
+<h4 data-i18n="edu_unity_dev">Desarrollador de Unity</h4>
+<p>Generation, Virtual, Colombia</p>
+</div>
+<div class="edu-right" data-i18n="edu_date_1">Ene 2026 — En curso</div>
+</div>
+<div class="edu-item">
+<div class="edu-left">
+<h4 data-i18n="edu_adso">Tecnólogo en Análisis y Desarrollo de Software</h4>
+<p>SENA, Virtual, Colombia</p>
+</div>
+<div class="edu-right" data-i18n="edu_date_2">Abr 2025 — En curso</div>
+</div>
+<div class="edu-item">
+<div class="edu-left">
+<h4 data-i18n="edu_tech_sys">Técnico en Sistemas</h4>
+<p>SENA, Soacha, Colombia</p>
+</div>
+<div class="edu-right">May 2023 — Dic 2024</div>
+</div>
+</div>
+</section>
+
+<section id="contacto" class="section contacto-section">
+<div class="container contacto-info">
+<h2 class="section-title"><span class="title-accent">05.</span> <span data-i18n="nav_contact">Contacto</span></h2>
+<p data-i18n="contact_desc">¿Tienes un proyecto en mente, una oportunidad laboral o simplemente quieres conversar sobre desarrollo de videojuegos? ¡Escríbeme!</p>
+<div class="contacto-links">
+<a href="mailto:sfrancohappy@gmail.com" target="_blank" rel="noopener" aria-label="Email">
+<i class="fas fa-envelope"></i>
+<span>Email</span>
+</a>
+<a href="https://www.linkedin.com/in/sebastian-franco-2007---/" target="_blank" rel="noopener" aria-label="LinkedIn">
+<i class="fab fa-linkedin-in"></i>
+<span>LinkedIn</span>
+</a>
+<a href="https://github.com/sebas-50" target="_blank" rel="noopener" aria-label="GitHub">
+<i class="fab fa-github"></i>
+<span>GitHub</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<p data-i18n="footer_text">&copy; 2026 Sebastián Franco Gomez — Construido con <i class="fas fa-heart"></i> y código limpio</p>
+</div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/carrusel.js"></script>
 </body>
 </html>
